@@ -1,0 +1,108 @@
+/*
+****************************
+	Total scope
+ ****************************
+  */
+
+*{
+	margin:0;
+	line-height: 200%;
+	/* font-family: 'Lato', sans-serif; */
+	font-family: 'Raleway', sans-serif;
+
+}
+
+p,h1, h3{
+	opacity: .6;
+}
+
+.sectionTitle{
+
+	text-align: center;
+	font-size: 45px;
+	font-weight:200;
+
+}
+
+hr{
+	width:80vh;
+	margin:0 auto;
+}
+
+.inline{
+	display: inline-block;
+}
+
+
+.sectionPadding{
+	padding:  0 20vh;
+}
+/*
+****************************
+ Navigation
+ ****************************
+  */
+.nav{
+	margin:0;
+	background: #282828;
+	padding: 20px 0px;
+
+	
+}
+.nav ul{
+	padding: 0 15px;
+}
+.nav ul li{
+	
+	display: inline;
+	margin-right: 25px;
+	font-size: 18px;
+	opacity: 0.8;
+}
+
+.nav a{
+	color:white;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+/*
+****************************
+ Header
+ ****************************
+  */
+
+header{
+	background: url("./assets/img/header_bg2.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+	height:100vh;
+	width:100%;
+	text-align: center;
+	border:white solid 1px; /* if I don't this it shifts down, wtf? */
+}
+
+header p{
+
+	font-size: 60px;
+}
+
+header p:first-of-type{
+	margin-top: 40vh;
+	}
+
+/*
+****************************
+ Contact
+ ****************************
+  */
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+
+.contact a{
+	color: #00bcd4 ;
+}
