@@ -21,12 +21,15 @@ p,h1, h3{
 	text-align: center;
 	font-size: 45px;
 	font-weight:200;
+	padding-top: 30px;
+	
 
 }
 
 hr{
-	width:80vh;
+	width:60vh;
 	margin:0 auto;
+	margin-bottom: 40px;
 }
 
 .inline{
@@ -35,7 +38,7 @@ hr{
 
 
 .sectionPadding{
-	padding:  0 20vh;
+	padding:  1vh 20vw;
 }
 /*
 ****************************
@@ -92,6 +95,142 @@ header p:first-of-type{
 	margin-top: 40vh;
 	}
 
+
+	/*
+****************************
+ Designer + Coder + Skills
+ ****************************
+  */
+
+ /*  Part Designer Section
+ */
+.partDesigner{
+	background: url("./assets/img/bg/divider12.png");
+	background-size: cover;
+	background-repeat:no-repeat;
+	/* background-position: center; */
+	color:white;
+	text-align: center;
+	padding-bottom: 30px;
+
+}
+.partDesigner h1{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+	opacity: 0.8;
+	
+}
+.partDesigner p{
+	margin: 20px auto;
+	width: 50vw;
+	font-size: 25px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+	opacity: 0.8;
+}
+
+/*  Part Coder Section
+ */
+	.partCoder{
+	background: url("./assets/img/bg/divider22.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	/* background-position: center; */
+	color:white;
+	text-align: center;
+	padding-bottom: 100px;
+	padding-top:100px;
+
+}
+.partCoder h1{
+	opacity: 0.8;
+}
+.partCoder p{
+	opacity: 0.8;
+
+	font-size: 25px;
+}
+
+
+/*  Part Skills
+ */
+
+ .skills h1{
+ 	opacity: 1;
+ 	color:black;
+	
+
+ }
+
+.skills{
+	
+	position:relative;
+}
+
+ .skill_sqr{
+
+ 	display:inline-block;
+ 	width:13vw;
+ 	/*  */
+ 	margin: 0 0.5vw;
+ 	border:2px solid red;
+ 	height: 500px;
+ 	position:relative;
+ 	text-align: center;
+
+ }
+
+ #html_skill{
+ 	position:absolute;
+ 	outline:black;
+ 		background-color: red;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 95%;
+ }
+  #css_skill{
+ 	position:absolute;
+ 	background-color: yellow;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 80%;
+ }
+  #js_skill{
+ 	position:absolute;
+ 	background-color: blue;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 95%;
+ }
+  #wp_skill{
+ 	position:absolute;
+ 	background-color: green;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 95%;
+ }
+
+ .skill_name{
+	position:absolute;
+	bottom:10px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size:30px;
+	color:white;
+	font-weight: 500;
+ }
+
+ .skill_percentage{
+	position:absolute;
+	bottom:80px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size:60px;
+	color:white;
+	font-weight: 500;
+ }
 /*
 ****************************
  Contact
