@@ -12,7 +12,10 @@
 
 }
 
-p,h1, h3{
+p{
+	font-size: 20px;
+}
+p,h1, h3, h4{
 	opacity: .6;
 }
 
@@ -37,6 +40,8 @@ hr{
 }
 
 
+/* Use this class for all sections that have lateral padding (e.g. About Section)
+ */
 .sectionPadding{
 	padding:  1vh 20vw;
 }
@@ -47,7 +52,7 @@ hr{
   */
 .nav{
 	margin:0;
-	background: #282828;
+	background: #2B2B2B;
 	padding: 20px 0px;
 
 	
@@ -168,9 +173,8 @@ header p:first-of-type{
  .skill_sqr{
 
  	display:inline-block;
- 	width:250px;
- 	/*  */
- 	margin: 0 0.5vw;
+ 	width:23%;
+ 	margin: 0 0.5%;
  	height: 500px;
  	position:relative;
  	text-align: center;
@@ -281,7 +285,7 @@ header p:first-of-type{
 
 .craftedinZurich h1{
 	text-align: center;
-	font-size: 80px;
+	font-size: 60px;
 	font-weight:200;
 	padding-top: 200px;
 	color:white;
@@ -306,8 +310,37 @@ header p:first-of-type{
 .column-left{ float: left; width: 33%; }
 .column-right{ float: right; width: 33%; }
 .column-center{ display: inline-block; width: 33%; }
-
+.contact{
+	padding-bottom: 100px;
+}
 
 .contact a{
-	color: #00bcd4 ;
+	color: #1A8AE0 ;
 }
+
+/*
+****************************
+ Page Footer
+ ****************************
+  */
+
+  .pg_footer{
+  	padding: 90px;
+  	height: 200px;
+  	
+  	text-align: center;
+  	background-color: #2B2B2B;
+  }
+
+  .pg_footer h4{
+  	color:white;
+  	font-weight:200;
+  	font-size: 20px;
+  }
+
+  .pg_footer a{
+  	color:#1A8AE0;
+  	opacity: 1;
+  	font-weight: 400;
+  	text-decoration: none;
+  }
