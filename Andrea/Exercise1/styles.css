@@ -171,42 +171,82 @@ header p:first-of-type{
  	width:13vw;
  	/*  */
  	margin: 0 0.5vw;
- 	border:2px solid red;
  	height: 500px;
  	position:relative;
  	text-align: center;
 
  }
-
+/* #69B7AE
+	#A7D6D1
+ */
  #html_skill{
  	position:absolute;
  	outline:black;
- 		background-color: red;
+/* 	color:#D5EFEC; */
  	width:100%;
  	bottom:0;
  	height: 95%;
+ 	background: #69B7AE; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#A7D6D1, #69B7AE ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#A7D6D1, #69B7AE ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#A7D6D1, #69B7AE ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#A7D6D1, #69B7AE ); /* Standard syntax */
  }
+
+#html_skill .skill_percentage{
+
+}
+
+#html_skill .skill_name{
+
+}
   #css_skill{
  	position:absolute;
- 	background-color: yellow;
  	width:100%;
  	bottom:0;
  	height: 80%;
+ 	/* color: #FFF3F0; */
+ 	background: #E2B0A0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F3D9D2, #E2B0A0 ); /* Standard syntax */
  }
+
+
+/* 
+ #E2B340
+#ECC15A
+  */
   #js_skill{
  	position:absolute;
- 	background-color: blue;
  	width:100%;
  	bottom:0;
  	height: 95%;
+ /* 	color:#FFDB85; */
+ 	background: #E2B340; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ECC15A, #E2B340 ); /* Standard syntax */
  }
+
+/* #C49965
+#DAB780 */
   #wp_skill{
  	position:absolute;
- 	background-color: green;
  	width:100%;
  	bottom:0;
  	height: 95%;
+ 	/* color: #FFE4BB; */
+ 	background: #C49965; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#DAB780, #C49965 ); /* Standard syntax */
  }
+ }
+
 
  .skill_name{
 	position:absolute;
@@ -216,8 +256,9 @@ header p:first-of-type{
 	left: 0;
 	right: 0;
 	font-size:30px;
-	color:white;
 	font-weight: 500;
+	color:black;
+	border: blue 4px solid;
  }
 
  .skill_percentage{
@@ -228,8 +269,9 @@ header p:first-of-type{
 	left: 0;
 	right: 0;
 	font-size:60px;
-	color:white;
 	font-weight: 500;
+	color:white;
+	opacity: 0.6;
  }
 /*
 ****************************
