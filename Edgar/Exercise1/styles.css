@@ -1,0 +1,346 @@
+/*
+****************************
+	Total scope
+ ****************************
+  */
+
+*{
+	margin:0;
+	line-height: 200%;
+	/* font-family: 'Lato', sans-serif; */
+	font-family: 'Raleway', sans-serif;
+
+}
+
+p{
+	font-size: 20px;
+}
+p,h1, h3, h4{
+	opacity: .6;
+}
+
+.sectionTitle{
+
+	text-align: center;
+	font-size: 50px;
+	font-weight:200;
+	padding-top: 30px;
+	
+
+}
+
+hr{
+	width:60vh;
+	margin:0 auto;
+	margin-bottom: 40px;
+}
+
+.inline{
+	display: inline-block;
+}
+
+
+/* Use this class for all sections that have lateral padding (e.g. About Section)
+ */
+.sectionPadding{
+	padding:  1vh 20vw;
+}
+/*
+****************************
+ Navigation
+ ****************************
+  */
+.nav{
+	margin:0;
+	background: #2B2B2B;
+	padding: 20px 0px;
+
+	
+}
+.nav ul{
+	padding: 0 15px;
+}
+.nav ul li{
+	
+	display: inline;
+	margin-right: 25px;
+	font-size: 18px;
+	opacity: 0.8;
+}
+
+.nav a{
+	color:white;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+/*
+****************************
+ Header
+ ****************************
+  */
+
+header{
+	background: url("./assets/img/header_bg2.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+	height:100vh;
+	width:100%;
+	text-align: center;
+	border:white solid 1px; /* if I don't this it shifts down, wtf? */
+}
+
+header p{
+
+	font-size: 60px;
+}
+
+header p:first-of-type{
+	margin-top: 40vh;
+	}
+
+
+	/*
+****************************
+ Designer + Coder + Skills
+ ****************************
+  */
+
+ /*  Part Designer Section
+ */
+.partDesigner{
+	background: url("./assets/img/bg/divider12.png");
+	background-size: cover;
+	background-repeat:no-repeat;
+	/* background-position: center; */
+	color:white;
+	text-align: center;
+	padding-bottom: 30px;
+
+}
+.partDesigner h1{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+	opacity: 0.8;
+	
+}
+.partDesigner p{
+	margin: 20px auto;
+	width: 50vw;
+	font-size: 25px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+	opacity: 0.8;
+}
+
+/*  Part Coder Section
+ */
+	.partCoder{
+	background: url("./assets/img/bg/divider22.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	/* background-position: center; */
+	color:white;
+	text-align: center;
+	padding-bottom: 100px;
+	padding-top:100px;
+
+}
+.partCoder h1{
+	opacity: 0.8;
+}
+.partCoder p{
+	opacity: 0.8;
+
+	font-size: 25px;
+}
+
+
+/*  Part Skills
+ */
+
+ .skills h1{
+ 	opacity: 1;
+ 	color:black;
+	
+
+ }
+
+.skills{
+	
+	position:relative;
+}
+
+ .skill_sqr{
+
+ 	display:inline-block;
+ 	width:23%;
+ 	margin: 0 0.5%;
+ 	height: 500px;
+ 	position:relative;
+ 	text-align: center;
+
+ }
+
+ #html_skill{
+ 	position:absolute;
+ 	outline:black;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 95%;
+ 	background: #69B7AE; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#A7D6D1, #69B7AE ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#A7D6D1, #69B7AE ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#A7D6D1, #69B7AE ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#A7D6D1, #69B7AE ); /* Standard syntax */
+ }
+
+
+  #css_skill{
+ 	position:absolute;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 80%;
+ 	background: #E2B0A0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F3D9D2, #E2B0A0 ); /* Standard syntax */
+ }
+
+
+/* 
+ #E2B340
+#ECC15A
+  */
+  #js_skill{
+ 	position:absolute;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 95%;
+ 	background: #E2B340; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ECC15A, #E2B340 ); /* Standard syntax */
+ }
+
+/* #C49965
+#DAB780 */
+  #wp_skill{
+ 	position:absolute;
+ 	width:100%;
+ 	bottom:0;
+ 	height: 95%;
+ 	background: #C49965; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#DAB780, #C49965 ); /* Standard syntax */
+ }
+ 
+
+
+ .skill_name{
+	position:absolute;
+	bottom:30px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size:20px;
+	font-weight: 400;
+	color:white; 
+	text-shadow: 0px -.5px rgba(0, 0, 0, 1);
+}
+
+ .skill_percentage{
+	position:absolute;
+	bottom:50px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size:60px;
+	font-weight: 500;
+	color:white;
+	opacity: 0.4;
+
+ }
+
+/*
+****************************
+ Crafted in Zurich
+ ****************************
+  */
+.craftedinZurich{
+	background: url("./assets/img/bg/divider661.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+	height:750px; 
+	text-align: center;
+
+
+}
+
+.craftedinZurich h1{
+	text-align: center;
+	font-size: 60px;
+	font-weight:200;
+	padding-top: 200px;
+	color:white;
+	opacity: 1;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.craftedinZurich p{
+	color:white;
+	font-size: 40px;
+	font-weight:200;
+	opacity: .9	;
+}
+
+
+/*
+****************************
+ Contact
+ ****************************
+  */
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+.contact{
+	padding-bottom: 100px;
+}
+
+.contact a{
+	color: #1A8AE0 ;
+}
+
+/*
+****************************
+ Page Footer
+ ****************************
+  */
+
+  .pg_footer{
+  	padding: 90px;
+  	height: 200px;
+  	
+  	text-align: center;
+  	background-color: #2B2B2B;
+  }
+
+  .pg_footer h4{
+  	color:white;
+  	font-weight:200;
+  	font-size: 20px;
+  }
+
+  .pg_footer a{
+  	color:#1A8AE0;
+  	opacity: 1;
+  	font-weight: 400;
+  	text-decoration: none;
+  }
