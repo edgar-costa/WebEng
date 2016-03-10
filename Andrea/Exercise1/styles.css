@@ -16,7 +16,7 @@ p{
 	font-size: 20px;
 }
 p,h1, h3, h4{
-	opacity: .6;
+	#opacity: .6;
 }
 
 .sectionTitle{
@@ -51,7 +51,10 @@ hr{
  ****************************
   */
 .nav{
+	#display:inline-block;
+	position: fixed;
 	margin:0;
+	width:100%;
 	background: #2B2B2B;
 	padding: 20px 0px;
 
@@ -65,7 +68,7 @@ hr{
 	display: inline;
 	margin-right: 25px;
 	font-size: 18px;
-	opacity: 0.8;
+	#opacity: 0.8;
 }
 
 .nav a{
@@ -121,7 +124,7 @@ header p:first-of-type{
 }
 .partDesigner h1{
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-	opacity: 0.8;
+	#opacity: 0.8;
 	
 }
 .partDesigner p{
@@ -129,7 +132,7 @@ header p:first-of-type{
 	width: 50vw;
 	font-size: 25px;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-	opacity: 0.8;
+	#opacity: 0.8;
 }
 
 /*  Part Coder Section
@@ -146,10 +149,10 @@ header p:first-of-type{
 
 }
 .partCoder h1{
-	opacity: 0.8;
+	#opacity: 0.8;
 }
 .partCoder p{
-	opacity: 0.8;
+	#opacity: 0.8;
 
 	font-size: 25px;
 }
@@ -159,7 +162,7 @@ header p:first-of-type{
  */
 
  .skills h1{
- 	opacity: 1;
+ 	#opacity: 1;
  	color:black;
 	
 
@@ -223,6 +226,7 @@ header p:first-of-type{
     background: -moz-linear-gradient(#ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#ECC15A, #E2B340 ); /* Standard syntax */
  }
+ 
 
 /* #C49965
 #DAB780 */
@@ -237,7 +241,6 @@ header p:first-of-type{
     background: -moz-linear-gradient(#DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#DAB780, #C49965 ); /* Standard syntax */
  }
- 
 
 
  .skill_name{
@@ -263,7 +266,7 @@ header p:first-of-type{
 	font-size:60px;
 	font-weight: 500;
 	color:white;
-	opacity: 0.4;
+	#opacity: 0.4;
 
  }
 
@@ -289,7 +292,7 @@ header p:first-of-type{
 	font-weight:200;
 	padding-top: 200px;
 	color:white;
-	opacity: 1;
+	#opacity: 1;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 
@@ -297,7 +300,7 @@ header p:first-of-type{
 	color:white;
 	font-size: 40px;
 	font-weight:200;
-	opacity: .9	;
+	#opacity: .9	;
 }
 
 
