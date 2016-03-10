@@ -270,6 +270,71 @@ header p:first-of-type{
 
  }
 
+
+
+/*
+****************************
+ Blog
+ ****************************
+  */
+
+#blog {
+	
+}
+
+/*The parent class instructs that the following divs will be displayed with flex */
+#parent {display:flex;}
+
+/*The first and second columns will take 40 percent of the page width each. The last column takes only the 20% remaining.*/
+#first {
+	padding: 10px;
+	flex:80;
+	display: flex;/*Here we instruct that inner objects will be using flex too*/
+	} 
+
+#second {
+	padding: 10px;
+	flex:80;
+	display:flex;}
+	
+/*This is box where the image of the blogger is placed*/
+.writer {
+	flex: 1;
+	background-color: #2B2B2B;
+	color: white;
+	text-align: center;
+}
+
+/* This applies to the introductory text of the blog entry*/
+.intro{
+	flex: 3;
+	padding: 10px;
+}	
+
+/*This one is the third column, with the least recent blog entries (only the title is shown)*/
+#others {
+	flex:20;
+	}
+
+.others-list li{
+	list-style-type: none;
+   margin: 10px;
+   color: white;
+}
+
+.others-box a{
+	color:#1A8AE0;
+}
+
+.others-box {
+	background-color: #2B2B2B;
+	padding: 10px;
+}
+
+
+
+
+
 /*
 ****************************
  Crafted in Zurich
@@ -301,7 +366,6 @@ header p:first-of-type{
 	font-size: 40px;
 	font-weight:200;
 	#opacity: .9	;
-}
 
 
 /*
@@ -315,6 +379,7 @@ header p:first-of-type{
 .column-center{ display: inline-block; width: 33%; }
 .contact{
 	padding-bottom: 100px;
+}
 }
 
 .contact a{
@@ -343,7 +408,7 @@ header p:first-of-type{
 
   .pg_footer a{
   	color:#1A8AE0;
-  	opacity: 1;
+	#opacity: 1;
   	font-weight: 400;
   	text-decoration: none;
   }
