@@ -279,22 +279,25 @@ header p:first-of-type{
   */
 
 #blog {
-	
+ background-color: #f2f2f2;	
 }
 
 /*The parent class instructs that the following divs will be displayed with flex */
-#parent {display:flex;}
+#parent {
+	display:flex;
+	padding: 1px;
+}
 
 /*The first and second columns will take 40 percent of the page width each. The last column takes only the 20% remaining.*/
 #first {
-	padding: 10px;
 	flex:80;
+	background-color: white;
 	display: flex;/*Here we instruct that inner objects will be using flex too*/
 	} 
 
 #second {
-	padding: 10px;
 	flex:80;
+	background-color: white;
 	display:flex;}
 	
 /*This is box where the image of the blogger is placed*/
@@ -331,6 +334,10 @@ header p:first-of-type{
 	padding: 10px;
 }
 
+.blog-date {
+	font-weight: normal;
+	font-size: 0.7em;
+}
 
 
 
@@ -367,14 +374,15 @@ header p:first-of-type{
 	font-weight:200;
 	#opacity: .9	;
 
-
+}
 /*
 ****************************
  Contact
  ****************************
   */
 
-.column-left{ float: left; width: 33%; }
+.column-left{
+	float: left; width: 33%; }
 .column-right{ float: right; width: 33%; }
 .column-center{ display: inline-block; width: 33%; }
 .contact{
