@@ -12,6 +12,7 @@
 
 }
 
+
 p{
     font-size: 20px;
 }
@@ -285,7 +286,7 @@ header p:first-of-type{
   */
 
 #blog {
- background-color: #f2f2f2;	
+ background-color: #f5f5f5;	
 }
 
 /*The parent class instructs that the following divs will be displayed with flex */
@@ -427,6 +428,8 @@ header p:first-of-type{
   	text-decoration: none;
   }
 
+/*PORTFOLIO*/
+
 .buttonsContainer {
     display: flex;
     flex-direction: row;
@@ -434,6 +437,7 @@ header p:first-of-type{
     text-align: center;
     margin:0 auto;
 }
+
 
 .button{
     width: 26%;
@@ -443,6 +447,7 @@ header p:first-of-type{
     color: #fff;
 }
 
+/*for the greeen active button*/
 .active {
     background-color: #32cd32;
 }
@@ -458,19 +463,57 @@ header p:first-of-type{
 
 .singleImage a{
     
-   
     color:white;
 
-
 }
+
+
+.portfolioImages img{
+    display: flex;
+    max-width: 80%;
+    padding-left: 10%;
+}   
+
+
 
 .singleImage{
     
-    flex:auto;
+    flex: initial;
     width: 22%;
     margin : 1em;
-    background-color: black;
-    color:white;
-
-
 }
+
+.singleImage six{
+    
+    flex: initial;
+    width: 22%;
+    margin : 1em;
+    align-items: flex-start;
+}
+
+.singleImage figcaption{
+    background-color: #3498db;
+    padding: 10px;
+    
+}
+
+.singleImage h5 {
+    
+    display: inline-block;
+    text-align: left;
+    color: white;
+    background-color: #3498db;
+    
+}
+
+.singleImage a {
+    display: inline-block;
+    text-align: right;  
+    color: white;
+    background-color: #2f2f2f;
+    
+}
+
+
+
+

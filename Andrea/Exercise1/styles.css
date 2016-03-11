@@ -12,17 +12,20 @@
 
 }
 
+
 p{
-	font-size: 20px;
+    font-size: 20px;
 }
+
+
 p,h1, h3, h4{
-	#opacity: .6;
+	opacity: .6;
 }
 
 .sectionTitle{
 
 	text-align: center;
-	font-size: 50px;
+	font-size: 50tpx;
 	font-weight:200;
 	padding-top: 30px;
 	
@@ -57,7 +60,7 @@ hr{
 	width:100%;
 	background: #2B2B2B;
 	padding: 20px 0px;
-
+    z-index: 1;
 	
 }
 .nav ul{
@@ -68,7 +71,7 @@ hr{
 	display: inline;
 	margin-right: 25px;
 	font-size: 18px;
-	#opacity: 0.8;
+	opacity: 0.8;
 }
 
 .nav a{
@@ -90,6 +93,7 @@ header{
 	background-position: center;
 	height:100vh;
 	width:100%;
+    background-position: center;
 	text-align: center;
 	border:white solid 1px; /* if I don't this it shifts down, wtf? */
 }
@@ -119,12 +123,12 @@ header p:first-of-type{
 	/* background-position: center; */
 	color:white;
 	text-align: center;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 
 }
 .partDesigner h1{
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-	#opacity: 0.8;
+	opacity: 0.8;
 	
 }
 .partDesigner p{
@@ -132,7 +136,7 @@ header p:first-of-type{
 	width: 50vw;
 	font-size: 25px;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-	#opacity: 0.8;
+	opacity: 0.8;
 }
 
 /*  Part Coder Section
@@ -145,14 +149,14 @@ header p:first-of-type{
 	color:white;
 	text-align: center;
 	padding-bottom: 100px;
-	padding-top:100px;
+	padding-top:0px;
 
 }
 .partCoder h1{
-	#opacity: 0.8;
+	opacity: 0.8;
 }
 .partCoder p{
-	#opacity: 0.8;
+	opacity: 0.8;
 
 	font-size: 25px;
 }
@@ -162,15 +166,17 @@ header p:first-of-type{
  */
 
  .skills h1{
- 	#opacity: 1;
+ 	/*opacity: 1;*/
  	color:black;
 	
 
  }
 
 .skills{
-	
+	background-color: #f5f5f5;
+    
 	position:relative;
+    
 }
 
  .skill_sqr{
@@ -219,7 +225,7 @@ header p:first-of-type{
  	position:absolute;
  	width:100%;
  	bottom:0;
- 	height: 95%;
+ 	height: 90%;
  	background: #E2B340; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
@@ -229,12 +235,13 @@ header p:first-of-type{
  
 
 /* #C49965
+/* #C49965
 #DAB780 */
   #wp_skill{
  	position:absolute;
  	width:100%;
  	bottom:0;
- 	height: 95%;
+ 	height: 80%;
  	background: #C49965; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
@@ -266,7 +273,7 @@ header p:first-of-type{
 	font-size:60px;
 	font-weight: 500;
 	color:white;
-	#opacity: 0.4;
+	opacity: 0.4;
 
  }
 
@@ -279,7 +286,7 @@ header p:first-of-type{
   */
 
 #blog {
- background-color: #f2f2f2;	
+ background-color: #f5f5f5;	
 }
 
 /*The parent class instructs that the following divs will be displayed with flex */
@@ -364,7 +371,7 @@ header p:first-of-type{
 	font-weight:200;
 	padding-top: 200px;
 	color:white;
-	#opacity: 1;
+	opacity: 1;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 
@@ -372,7 +379,7 @@ header p:first-of-type{
 	color:white;
 	font-size: 40px;
 	font-weight:200;
-	#opacity: .9	;
+	opacity: .9	;
 
 }
 /*
@@ -416,7 +423,97 @@ header p:first-of-type{
 
   .pg_footer a{
   	color:#1A8AE0;
-	#opacity: 1;
+	opacity: 1;
   	font-weight: 400;
   	text-decoration: none;
   }
+
+/*PORTFOLIO*/
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 55vh;
+    text-align: center;
+    margin:0 auto;
+}
+
+
+.button{
+    width: 26%;
+    margin: 0 20px;
+    flex: auto;
+    background-color: #808080;
+    color: #fff;
+}
+
+/*for the greeen active button*/
+.active {
+    background-color: #32cd32;
+}
+
+.portfolioImages {
+    display: inline-flex;
+    flex-direction: row;
+    width : 100%;
+    flex-wrap: wrap;
+    
+    
+}
+
+.singleImage a{
+    
+    color:white;
+
+}
+
+
+.portfolioImages img{
+    display: flex;
+    max-width: 80%;
+    padding-left: 10%;
+}   
+
+
+
+.singleImage{
+    
+    flex: initial;
+    width: 22%;
+    margin : 1em;
+}
+
+.singleImage six{
+    
+    flex: initial;
+    width: 22%;
+    margin : 1em;
+    align-items: flex-start;
+}
+
+.singleImage figcaption{
+    background-color: #3498db;
+    padding: 10px;
+    
+}
+
+.singleImage h5 {
+    
+    display: inline-block;
+    text-align: left;
+    color: white;
+    background-color: #3498db;
+    
+}
+
+.singleImage a {
+    display: inline-block;
+    text-align: right;  
+    color: white;
+    background-color: #2f2f2f;
+    
+}
+
+
+
+
