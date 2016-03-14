@@ -11,6 +11,12 @@
     margin: 0 auto;
 }
 
+.web{
+
+    max-width: 1600px;
+
+}
+
 a{
     text-decoration: none;
 }
@@ -62,21 +68,17 @@ hr{
  ****************************
   */
 .nav{
-	#display:inline-block;
 	position: fixed;
-	margin:0;
 	width:100%;
 	background: #2B2B2B;
 	padding: 20px 0px;
     z-index: 1;
-	
 }
 .nav ul{
 	padding: 0 15px;
 }
 .nav ul li{
-	
-	display: inline;
+	display: inline-block;
 	margin-right: 25px;
 	font-size: 18px;
 	opacity: 0.8;
