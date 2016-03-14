@@ -129,7 +129,7 @@ header p:first-of-type{
  */
 .partDesigner{
 	background-image: url("./assets/img/bg/divider12.png");
-    #background-attachment:fixed;
+    background-attachment:fixed;
     overflow-x: hidden;
     overflow-y: auto;
 	background-size: cover;
@@ -138,15 +138,12 @@ header p:first-of-type{
 	color:white;
 	text-align: center;
 	padding-bottom: 20px;
-      transform: translateZ(-1px);
-
 
 }
 .partDesigner h1{
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 	opacity: 0.8;
-    transform: translateZ(0);
-
+	
 }
 .partDesigner p{
 	margin: 20px auto;
@@ -154,8 +151,6 @@ header p:first-of-type{
 	font-size: 25px;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 	opacity: 0.8;
-    transform:   translateZ(0);
-
 }
 
 /*  Part Coder Section
