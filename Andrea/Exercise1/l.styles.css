@@ -33,7 +33,7 @@ p,h1, h3, h4{
 .sectionTitle{
 
 	text-align: center;
-	font-size: 50tpx;
+	font-size: 50px;
 	font-weight:200;
 	padding-top: 30px;
 	
@@ -63,7 +63,7 @@ hr{
  ****************************
   */
 .nav{
-	#display:inline-block;
+	display:inline-block;
 	position: fixed;
 	margin:0;
 	width:100%;
