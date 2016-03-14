@@ -319,28 +319,33 @@ header p:first-of-type{
 
 .portfolioImages {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
+
 .portfolioImages img{
-    
-    display: flex;
-    flex-direction: row;
-    max-width: 94%;
-    padding-left: 3%;
+    width:100%;
 }   
 
 
 
 .singleImage{
-    
-    display: flex;  
-    max-width: 23%;
-    margin : 1em;
-    align-self: flex-end;
+	/* border: red 3px solid; */
+    align-self: center;
+   	margin:10px 0;
+   	width: 100%;
+   
 }
+/* Hide 1 and 4 singleImage*/
+.singleImage:nth-child(1){
+	display:none;
+}
+.singleImage:nth-child(4){
+	display:none;
+}
+
 
 .singleImage figcaption{
     position: relative;
@@ -353,7 +358,7 @@ header p:first-of-type{
 }
 
 .singleImage h5 {
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     background-color: #3498db;
@@ -363,9 +368,11 @@ header p:first-of-type{
 }
 
 .singleImage a {
+	 font-size: 20px;
     color: white;
     background-color: #2f2f2f;
     padding: 5px;
+    margin:0;
     
 }
 
