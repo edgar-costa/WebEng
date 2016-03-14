@@ -12,6 +12,14 @@
 
 }
 
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 p{
     font-size: 20px;
@@ -46,7 +54,8 @@ hr{
 /* Use this class for all sections that have lateral padding (e.g. About Section)
  */
 .sectionPadding{
-	padding:  1vh 20vw;
+    padding:  1vh 15vw;
+
 }
 /*
 ****************************
@@ -99,13 +108,17 @@ header{
 }
 
 header p{
-
-	font-size: 60px;
+    font-family: 'sans-serif';
+    font-size: 72px;
+    margin: 0 auto;
+    opacity: 1;
+    text-shadow: 1px 3px white;
 }
+
 
 header p:first-of-type{
 	margin-top: 40vh;
-	}
+}
 
 
 	/*
@@ -278,6 +291,93 @@ header p:first-of-type{
  }
 
 
+/*PORTFOLIO*/
+/*===========================*/
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 62vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.button{
+    width: 24%;
+    margin: 0 auto;
+    background-color: #808080;
+    color: white;
+    padding: 5px
+}
+
+.button p{
+    font-size: 16px;
+    opacity: 1;
+}
+
+/*for the greeen active button*/
+.active {
+    background-color: #32cd32;
+}
+
+/*IMAGES*/
+/*================================*/
+
+.portfolioImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolioImages img{
+    
+    display: flex;
+    flex-direction: row;
+    max-width: 94%;
+    padding-left: 3%;
+}   
+
+
+
+.singleImage{
+    
+    display: flex;  
+    max-width: 23%;
+    margin : 1em;
+    align-self: flex-end;
+}
+
+.singleImage figcaption{
+    position: relative;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row;
+    background-color: #3498db;
+    padding: 8px;
+    justify-content: space-around;
+}
+
+.singleImage h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    padding: 8px;
+
+    
+}
+
+.singleImage a {
+    color: white;
+    background-color: #2f2f2f;
+    padding: 5px;
+    
+}
+
+
+
 
 /*
 ****************************
@@ -292,7 +392,6 @@ header p:first-of-type{
 /*The parent class instructs that the following divs will be displayed with flex */
 #parent {
 	display:flex;
-	padding: 1px;
 }
 
 /*The first and second columns will take 40 percent of the page width each. The last column takes only the 20% remaining.*/
@@ -318,27 +417,47 @@ header p:first-of-type{
 /* This applies to the introductory text of the blog entry*/
 .intro{
 	flex: 3;
-	padding: 10px;
+	padding: 42px;
 }	
 
 /*This one is the third column, with the least recent blog entries (only the title is shown)*/
 #others {
 	flex:20;
+    display: flex;
+    padding-left: 15px;
 	}
 
+.others-list {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    align-self: flex-end;
+}
+
+.others-list p{
+    opacity: 0.8;
+}
+
 .others-list li{
-	list-style-type: none;
-   margin: 10px;
-   color: white;
+    list-style-type: none;
+ 
+    color: white;
 }
 
 .others-box a{
 	color:#1A8AE0;
+    font-size: 16px;
+    vertical-align: bottom;
 }
 
 .others-box {
 	background-color: #2B2B2B;
-	padding: 10px;
+	padding: 20px;
+    padding-top: 25px;
+    height: 100%;
+    margin-top: 13px;
 }
 
 .blog-date {
@@ -388,14 +507,31 @@ header p:first-of-type{
  ****************************
   */
 
+
+
+.columns {
+    display: flex;
+}
+
 .column-left{
-	float: left; width: 33%; }
-.column-right{ float: right; width: 33%; }
-.column-center{ display: inline-block; width: 33%; }
+    flex:35;
+}
+
+
+.column-center{
+    flex:30;
+}
+
+
+.column-right{
+    flex:30;
+}
+
 .contact{
+    padding:  1vh 8vw;
 	padding-bottom: 100px;
 }
-}
+
 
 .contact a{
 	color: #1A8AE0 ;
@@ -408,8 +544,7 @@ header p:first-of-type{
   */
 
   .pg_footer{
-  	padding: 90px;
-  	height: 200px;
+  	padding: 70px;
   	
   	text-align: center;
   	background-color: #2B2B2B;
@@ -428,91 +563,8 @@ header p:first-of-type{
   	text-decoration: none;
   }
 
-/*PORTFOLIO*/
-
-.buttonsContainer {
-    display: flex;
-    flex-direction: row;
-    width: 55vh;
-    text-align: center;
-    margin:0 auto;
-}
 
 
-.button{
-    width: 26%;
-    margin: 0 20px;
-    flex: auto;
-    background-color: #808080;
-    color: #fff;
-}
-
-/*for the greeen active button*/
-.active {
-    background-color: #32cd32;
-}
-
-.portfolioImages {
-    display: inline-flex;
-    flex-direction: row;
-    width : 100%;
-    flex-wrap: wrap;
-    
-    
-}
-
-.singleImage a{
-    
-    color:white;
-
-}
-
-
-.portfolioImages img{
-    display: flex;
-    max-width: 80%;
-    padding-left: 10%;
-}   
-
-
-
-.singleImage{
-    
-    flex: initial;
-    width: 22%;
-    margin : 1em;
-}
-
-.singleImage six{
-    
-    flex: initial;
-    width: 22%;
-    margin : 1em;
-    align-items: flex-start;
-}
-
-.singleImage figcaption{
-    background-color: #3498db;
-    padding: 10px;
-    
-}
-
-.singleImage h5 {
-    
-    display: inline-block;
-    text-align: left;
-    color: white;
-    background-color: #3498db;
-    
-}
-
-.singleImage a {
-    display: inline-block;
-    text-align: right;  
-    color: white;
-    background-color: #2f2f2f;
-    
-}
 
 
 
