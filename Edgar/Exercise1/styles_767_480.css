@@ -422,6 +422,7 @@ header p:first-of-type{
 	}
 
 .others-list {
+    height: 100%;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;

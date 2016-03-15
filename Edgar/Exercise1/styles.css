@@ -11,6 +11,10 @@
     margin: 0 auto;
 }
 
+body{
+    font-size: 62.5%;
+}
+
 .web{
 
     max-width: 1600px;
@@ -27,7 +31,7 @@ img {
 }
 
 p{
-    font-size: 20px;
+    font-size: 2em;
 }
 
 
@@ -38,15 +42,15 @@ p,h1, h3, h4{
 .sectionTitle{
 
 	text-align: center;
-	font-size: 50px;
-	font-weight:200;
+	font-size: 5em;
+    font-weight:200;
 	padding-top: 30px;
 	
 
 }
 
 hr{
-	width:60vh;
+	width:60%;
 	margin:0 auto;
 	margin-bottom: 40px;
 }
@@ -59,7 +63,7 @@ hr{
 /* Use this class for all sections that have lateral padding (e.g. About Section)
  */
 .sectionPadding{
-    padding:  1vh 15vw;
+    padding:  0 10%;
 
 }
 /*
@@ -80,7 +84,7 @@ hr{
 .nav ul li{
 	display: inline-block;
 	margin-right: 25px;
-	font-size: 18px;
+	font-size: 1.8em;
 	opacity: 0.8;
 }
 
@@ -109,7 +113,7 @@ header{
 
 header p{
     font-family: 'sans-serif';
-    font-size: 72px;
+    font-size: 7.2em;
     margin: 0 auto;
     opacity: 1;
     text-shadow: 1px 3px white;
@@ -150,7 +154,7 @@ header p:first-of-type{
 .partDesigner p{
 	margin: 20px auto;
 	width: 50vw;
-	font-size: 25px;
+	font-size: 2.5em;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 	opacity: 0.8;
 }
@@ -174,7 +178,7 @@ header p:first-of-type{
 .partCoder p{
 	opacity: 0.8;
 
-	font-size: 25px;
+	font-size: 2.5em;
 }
 
 
@@ -273,7 +277,7 @@ header p:first-of-type{
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	font-size:20px;
+	font-size:2em;
 	font-weight: 400;
 	color:white; 
 	text-shadow: 0px -.5px rgba(0, 0, 0, 1);
@@ -286,7 +290,7 @@ header p:first-of-type{
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	font-size:60px;
+	font-size:6em;
 	font-weight: 500;
 	color:white;
 	opacity: 0.4;
@@ -300,7 +304,7 @@ header p:first-of-type{
 .buttonsContainer {
     display: flex;
     flex-direction: row;
-    width: 62vh;
+    width: 55%;
     text-align: center;
     margin: 0 auto;
 }
@@ -315,7 +319,7 @@ header p:first-of-type{
 }
 
 .button p{
-    font-size: 16px;
+    font-size: 1.6em;
     opacity: 1;
 }
 
@@ -363,7 +367,7 @@ header p:first-of-type{
 }
 
 .singleImage h5 {
-    font-size: 16px;
+    font-size: 1.6em;;
     font-weight: bold;
     color: white;
     background-color: #3498db;
@@ -373,6 +377,7 @@ header p:first-of-type{
 }
 
 .singleImage a {
+    font-size: 1.6em;
     color: white;
     background-color: #2f2f2f;
     padding: 5px;
@@ -428,44 +433,36 @@ header p:first-of-type{
 	flex:20;
     display: flex;
     padding-left: 15px;
+    align-self: center
 	}
 
 .others-list {
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px;
-    align-self: flex-end;
+  
+    list-style-type: none;
+    color: white;
 }
 
 .others-list p{
     opacity: 0.8;
 }
 
-.others-list li{
-    list-style-type: none;
- 
-    color: white;
+.others-box {
+	background-color: #2B2B2B;
+    height: 30%;
+    margin-top: 5px;
+    padding: 8%;
 }
 
 .others-box a{
 	color:#1A8AE0;
-    font-size: 16px;
     vertical-align: bottom;
 }
 
-.others-box {
-	background-color: #2B2B2B;
-	padding: 20px;
-    padding-top: 25px;
-    height: 100%;
-    margin-top: 13px;
-}
+
 
 .blog-date {
 	font-weight: normal;
-	font-size: 0.7em;
+	font-size: 1em;
 }
 
 
@@ -489,7 +486,7 @@ header p:first-of-type{
 
 .craftedinZurich h1{
 	text-align: center;
-	font-size: 60px;
+	font-size: 6em;
 	font-weight:200;
 	padding-top: 200px;
 	color:white;
@@ -499,7 +496,7 @@ header p:first-of-type{
 
 .craftedinZurich p{
 	color:white;
-	font-size: 40px;
+	font-size: 4em;
 	font-weight:200;
 	opacity: .9	;
 
@@ -531,7 +528,6 @@ header p:first-of-type{
 }
 
 .contact{
-    padding:  1vh 8vw;
 	padding-bottom: 100px;
 }
 
@@ -572,3 +568,10 @@ header p:first-of-type{
 
 
 
+
+.others-div {
+display: flex;
+flex-direction: column; 
+justify-content: space-between; 
+align-self: center;
+}
