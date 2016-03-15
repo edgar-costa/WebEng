@@ -153,7 +153,7 @@ header p:first-of-type{
 }
 .partDesigner p{
 	margin: 20px auto;
-	width: 50vw;
+	width: 70%;
 	font-size: 2.5em;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 	opacity: 0.8;
@@ -394,7 +394,8 @@ header p:first-of-type{
   */
 
 #blog {
- background-color: #f5f5f5;	
+    background-color: #f5f5f5;
+    padding-bottom: 2%;
 }
 
 /*The parent class instructs that the following divs will be displayed with flex */
