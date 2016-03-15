@@ -1,10 +1,18 @@
+body {
+    font-size: 62.5%;
+}
+
+.nav {
+    display: flex;
+    align-self: center;
+}
 
 .nav ul li{
-	font-size: 16px;
+	font-size: 1.6em;
 }
 
 header p{
-    font-size: 50px;
+    font-size: 5em;
 }
 
 /*
@@ -14,23 +22,30 @@ header p{
   */
 
 .partDesigner p{
-	width: 70vw;
+	width: 90%;
 }
 
 .partCoder{
 	padding-top:20px;
 }
 
+.partcoder hr{
+    width: 60%;
+}
+
+.partCoder p{
+	width:90%
+}
+
 hr{
-	width:80%;
+	width: 80%;
 	margin:0 auto;
 	margin-bottom: 40px;
 }
 
 .sectionTitle{
-
 	text-align: center;
-	font-size: 35px;
+	font-size: 3em;
 	font-weight:200;
 	padding-top: 30px;
 }
@@ -131,7 +146,7 @@ hr{
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	font-size:25px;
+	font-size:2.5em;
 	font-weight: 400;
 	color:white; 
 	text-shadow: 0px -.5px rgba(0, 0, 0, 1);
@@ -144,7 +159,7 @@ hr{
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	font-size:50px;
+	font-size:4.5em;
 	font-weight: 500;
 	color:white;
 	opacity: 0.4;
@@ -172,9 +187,12 @@ hr{
 ****************************
   */
 
-
 .columns {
     display: block;
+}
+
+.intro h2{
+    font-size: 2em;
 }
 
 #first {display: block;}
@@ -187,12 +205,20 @@ hr{
 
 #others {
     display:inline;
+    margin: 2px;
+}
+
+.others-box {
+    padding:3%;
 }
 
 .craftedinZurich h1 {
-    font-size: 40px;
+    font-size:3.5em;
 }
 
+.craftedinZurich p {
+    font-size:3em;
+}
 
 /*
 ****************************
@@ -205,10 +231,19 @@ hr{
     display: block;
 }
 
+.columns h3{
+    font-size: 2em;
+}
+
+.columns p{
+    font-size: 1.7em;
+}
+
 .column-left{
     padding-bottom: 8%;
     flex:none;
 }
+
 
 .column-center{
    padding-bottom: 10%;
