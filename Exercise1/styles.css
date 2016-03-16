@@ -173,7 +173,7 @@ header p:first-of-type{
 
 /*  Part Coder Section
  */
-	.partCoder{
+.partCoder{
 	background-image: url("./assets/img/bg/divider22.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
