@@ -42,6 +42,10 @@ hr{
 
 }
 
+h1{
+	font-size: 2.8em;
+}
+
 
 /*
 ****************************
@@ -53,9 +57,9 @@ hr{
 	position: fixed;
 	width:100%;
 	background: #2B2B2B;
-	padding: 20px 0px;
+	padding: 10px 0px 10px 0;
 	 z-index: 1;
-    margin-top:-10px;
+
 	
 }
 .nav ul{
@@ -67,7 +71,7 @@ hr{
 }
 .nav ul li{
 	text-align: center;
-	font-size: 4.0em;
+	font-size: 1.3em;
 	opacity: 0.8;
 }
 
@@ -83,7 +87,7 @@ hr{
 
 header p{
 	 
-	font-size: 6.0em;
+	font-size: 4.0em;
 }
 
 header p:first-of-type{
@@ -97,6 +101,11 @@ header p:first-of-type{
 	padding-bottom:50px;
 }
 
+#about h1{
+	font-size:2.4em;
+}
+
+
 	/*
 ****************************
  Designer + Coder + Skills
@@ -107,15 +116,19 @@ header p:first-of-type{
  */
 .partDesigner{
 
-	height:100vh;
+	height:50vh;
 	margin-bottom: 0;
 	border-top: white 1px solid;
-	font-size: 1.5em;
 
 }
 
+.partDesigner h1{
+	font-size:2.4em;
+}
+
+
 .partDesigner p{
-	
+	font-size: 1.5em;	
 	width:100%;
 }
 
@@ -125,35 +138,33 @@ header p:first-of-type{
 	padding: 0 8%;
 	border-top: black solid 1px;
 	padding-bottom: 50px;
-	height:100vh;
-	font-size: 2.2em;
+	height:50vh;
 	line-height: 200%;
 }
 
+.partCoder p{
+	font-size:1.4em;
+}
+
 .partCoder h1{
-	font-size: 3.8em;
+	font-size:2.4em;
 }
 
 
 /*  Part Skills
  */
 
- .skills h1{
- 	
- 	font-size: 4.0em;
-	
 
- }
 
 .skills{
 	
 	border: white 1px solid;
-	padding-bottom: 100px; 
+	padding-bottom: 50px; 
 }
 
-
-
-
+.skills h1{
+	font-size:2.4em;
+}
 
 
 
@@ -206,7 +217,6 @@ header p:first-of-type{
 #DAB780 */
   #wp_skill{
   	position:absolute;
-
  	width:80%;
  	bottom:0;
  	height: 100%;
@@ -215,44 +225,41 @@ header p:first-of-type{
     background: -o-linear-gradient(left, #DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(left, #DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
     background: linear-gradient(left, #DAB780, #C49965 ); /* Standard syntax */
+ 	
  }
 
 
  .skill_sqr{
 	
 	
-	display: block;
- 	width:100%;
- 	margin: 3% 0;
- 	height: 200px;
+	width:100%;
+ 	margin: 4% 0;
+ 	height: 100px;
  	position:relative;
-
 	
 
  }
 
   .skill_name{
+	display: inline-block;
+  	width:fit-content;
   	padding:0;
-  	top:65px;
-  	left:20px;
-  	font-size: 3.5em;
-  	position:absolute;
-  	text-align: left;
-/*   	border:red solid 4px;
- */	order:1;
-
-
-
+  	font-size: 1.7em;
+  	left:5%;
+  	top:35px;
+  	margin:0;
 }
 
  .skill_percentage{
- 	  	position:absolute;
-/* 		border: solid 4px blue;
- */ 	margin: 0;
- 	align-self: center;
-	text-align: center;
-	font-size:6.0em;
+
+	left:60%;
+	top:20%;
+ 	width:fit-content;
+	padding:0;
+	font-size:3.0em;
+	margin:0;
 	opacity: 0.5;
+	
 
  }
 
@@ -261,6 +268,12 @@ header p:first-of-type{
 #portfolio br{
 	display:none;
 }
+
+#portfolio
+ h1{
+	font-size:2.4em;
+}
+
 
 #portfolio hr{
 	width:80%;
@@ -278,17 +291,23 @@ header p:first-of-type{
    
     width: 95%;
     text-align: center;
-    margin: 20px auto;
+    margin: 10px auto;
+
 }
+
 
 
 .button{
     width: 30%;
-    padding: 10px;
+    margin:2px;
+    height:30px;
+    flex:1;
 }
 
+
+
 .button p{
-    font-size: 30px;
+    font-size: 1.3em;
     opacity: 1;
 }
 
@@ -337,7 +356,6 @@ header p:first-of-type{
 	text-align: center;
 	padding:0px;
     position: relative;
-     font-size: 2em;
     margin-top: -30px;
     justify-content: center;
 
@@ -348,6 +366,8 @@ header p:first-of-type{
 .singleImage h5 {
 	text-align: center;
 	flex:1;
+	 font-size:1.3em;
+
     
 }
 
@@ -359,8 +379,7 @@ header p:first-of-type{
 	flex:1;
     margin:0;
     text-transform: uppercase;
-    font-size:2em;
-    
+    font-size:1.3em;
 }
 
 
@@ -382,6 +401,11 @@ header p:first-of-type{
  padding:0;
  
 }
+
+#blog h1{
+	font-size:2.4em;
+}
+
 #blog br{
 	display:none;
 }
@@ -409,11 +433,10 @@ header p:first-of-type{
 	
 /*This is box where the image of the blogger is placed*/
 .writer {
-	padding:20px;
+	padding:10px;
 }
 
 .writer h4{
-	font-size: 2em;
 	margin:0;
 }
 .writer h5{
@@ -422,9 +445,9 @@ margin:0;
 }
 
 .writer img{
-	margin-top: 20px;
-	height: 100px;
-	width:100px;
+	margin-top:10px;
+	height: 40px;
+	width:40px;
 }
 
 .writer br{
@@ -457,18 +480,17 @@ margin:0;
 
 
 .others-box {
+	padding:10px;
 	list-style-type: none;
-  	flex-grow:1;
     color: white;
     margin:2px;
 	background-color: #2B2B2B;
-	padding: 20px;
-    height: inherit;
-    flex:1;
+/*     height: inherit;
+ */    flex:1;
 }
 
 .others-list p{
-     font-size:30px;
+     font-size:1.2em;
 
 }
 
@@ -495,14 +517,31 @@ margin:0;
   */
 
 
+
 .craftedinZurich{
-	margin-top: 40px;
+	margin-top: 10px;
+	width:100%;
+	height:500px;
 }
+
+.craftedinZurich h1{
+	font-size: 2.4em;
+}
+
+.craftedinZurich p{
+	font-size: 2.0em;
+}
+
 /*
 ****************************
  Contact
  ****************************
   */
+
+
+.contact h1{
+	font-size:2.4em;
+}
 
 .contact .column-left br{
 	display:inline-block;
@@ -512,7 +551,6 @@ margin:0;
 
 
 .columns {
-
     flex-direction: column;
 }
 
@@ -521,19 +559,19 @@ margin:0;
 	margin:0, auto;
 }
 
-.columns{
-	/* display:inline-block;
-		font-size: 1.4em	; */
-}
+
 .column-left {
-	font-size:2.0em;
 	flex:100;
 	margin:0 auto;
 	text-align: center;
 }
 
 .column-left h3{
-	font-size:2.2em;
+	font-size:1.8em;
+}
+
+.column-left p{
+	font-size:1.5em;
 }
 
 .column-center 	{
@@ -559,15 +597,15 @@ margin:0;
   */
 
   .pg_footer{
-  	padding: 90px;
-  	height: 100px;
+  	padding: 40px;
+  	height: 40px;
   
   }
 
   .pg_footer h4{
   	color:white;
   	font-weight:200;
-  	font-size: 40px;
+  	font-size: 1.5em;
   }
 
   .pg_footer a{
