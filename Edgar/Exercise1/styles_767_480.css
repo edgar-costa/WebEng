@@ -8,7 +8,7 @@ body {
 }
 
 .nav ul li{
-	font-size: 1.6em;
+	font-size: 1.5em;
 }
 
 header p{
@@ -87,10 +87,10 @@ hr{
  	bottom:0;
  	height: 100%;
  	background: #69B7AE; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#A7D6D1, #69B7AE ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#A7D6D1, #69B7AE ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#A7D6D1, #69B7AE ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#A7D6D1, #69B7AE ); /* Standard syntax */
+    background: -webkit-linear-gradient(right,#A7D6D1, #69B7AE ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,#A7D6D1, #69B7AE ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,#A7D6D1, #69B7AE ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left,#A7D6D1, #69B7AE ); /* Standard syntax */
  }
 
 
@@ -100,10 +100,10 @@ hr{
  	bottom:0;
  	height: 100%;
  	background: #E2B0A0; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#F3D9D2, #E2B0A0 ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#F3D9D2, #E2B0A0 ); /* Standard syntax */
+    background: -webkit-linear-gradient(right, #F3D9D2, #E2B0A0 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #F3D9D2, #E2B0A0 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #F3D9D2, #E2B0A0 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #F3D9D2, #E2B0A0 ); /* Standard syntax */
  }
 
 /* 
@@ -116,10 +116,10 @@ hr{
  	bottom:0;
  	height: 100%;
  	background: #E2B340; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#ECC15A, #E2B340 ); /* Standard syntax */
+    background: -webkit-linear-gradient(right, #ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #ECC15A, #E2B340 ); /* Standard syntax */
  }
  
 
@@ -132,10 +132,10 @@ hr{
  	bottom:0;
  	height: 100%;
  	background: #C49965; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#DAB780, #C49965 ); /* Standard syntax */
+    background: -webkit-linear-gradient(right, #DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #DAB780, #C49965 ); /* Standard syntax */
  }
 
 
@@ -176,9 +176,98 @@ hr{
 ****************************
   */
 
+#portfolio br{
+	display:none;
+}
 
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+}
 
+.button{
+    width: 27%;
+    margin: 0 auto;
+    background-color: #808080;
+    color: white;
+    padding: 11px;
+}
 
+.button p{
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+/*for the greeen active button*/
+.active {
+    background-color: #32cd32;
+}
+
+/*IMAGES*/
+
+.portfolioImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.portfolioImages img{
+    width:100%;
+}   
+
+.singleImage{
+	/* border: red 3px solid; */
+    align-self: center;
+   	margin:0 0 2px 0 ;
+   	width: 100%;
+}
+
+.singleImage:nth-child(3) img{
+    width: 650px;
+}
+
+/* Hide 1 and 4 singleImage*/
+.singleImage:nth-child(1){
+	display:none;
+}
+
+.singleImage:nth-child(4){
+	display:none;
+}
+
+.singleImage figcaption{
+	text-align: center;
+    position: relative;
+    font-size: 1.2em;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #3498db; 
+    justify-content: center;
+}
+
+.singleImage h5 {
+	text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    padding: 8px;
+	flex:1;
+    
+}
+
+.singleImage a {
+	flex:1;
+    color: white;
+    background-color: #2f2f2f;
+    padding: 5px;
+    margin:0;
+    text-transform: uppercase;   
+}
 
 
 /*
@@ -203,21 +292,54 @@ hr{
 	display: block;
 }
 
+
 #others {
-    display:inline;
-    margin: 2px;
+    display: flex;
+}
+
+.others-list {
+	width:100%;
+  	display:flex;
+   	flex-direction: row;
+   	padding:0;
+}
+
+.others-list p{
+    opacity: 0.8;
+    font-size:2em;
+}
+
+.others-list li{
+    list-style-type: none;
+  	flex:1;
+    color: white;
+    margin:2px;
+}
+
+.others-box a{
+	color:#1A8AE0;
+	font-size:1.1em;
 }
 
 .others-box {
-    padding:3%;
+	background-color: #2B2B2B;
+	padding: 10px;
+    height: 100%;
+    }
+
+.writer h4 {
+    font-size: 1.7em;
 }
 
-.craftedinZurich h1 {
-    font-size:3.5em;
+p.blog-date {
+	font-weight: normal;
+	font-size: 1.3em;
 }
 
-.craftedinZurich p {
-    font-size:3em;
+
+.blog-date {
+	font-weight: normal;
+	font-size: 1.3em;
 }
 
 /*
@@ -225,6 +347,18 @@ hr{
  Contact
 ****************************
   */
+
+
+
+.craftedinZurich h1 {
+    font-size:3.5em;
+    font-weight: 200;
+}
+
+.craftedinZurich p {
+    font-size:3em;
+    font-weight: 200;
+}
 
 
 .columns {
