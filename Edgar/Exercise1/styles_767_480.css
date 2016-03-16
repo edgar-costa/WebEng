@@ -3,12 +3,12 @@ body {
 }
 
 .nav {
-    display: flex;
     align-self: center;
 }
 
 .nav ul li{
-	font-size: 1.5em;
+	font-size: 1.7em;
+    font-weight: 400;
 }
 
 header p{
@@ -216,7 +216,7 @@ hr{
 }
 
 .portfolioImages img{
-    width:100%;
+    width:10%;
 }   
 
 .singleImage{
@@ -226,9 +226,9 @@ hr{
    	width: 100%;
 }
 
-.singleImage:nth-child(3) img{
+/*.singleImage:nth-child(3) img{
     width: 650px;
-}
+}*/
 
 /* Hide 1 and 4 singleImage*/
 .singleImage:nth-child(1){
@@ -240,6 +240,7 @@ hr{
 }
 
 .singleImage figcaption{
+    width: 100%;
 	text-align: center;
     position: relative;
     font-size: 1.2em;
