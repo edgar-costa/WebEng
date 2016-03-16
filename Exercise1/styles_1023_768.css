@@ -1,0 +1,68 @@
+/*
+***************************************
+Style for devices from 768px to 1023px
+**************************************
+  */
+
+
+
+body{
+    font-size: 50%;
+}
+
+
+
+/*
+****************************
+ Blog
+****************************
+  */
+
+
+#parent{
+    
+  display: block;
+    
+}
+
+#first{
+        
+    display:flex;
+    flex-direction:column;
+}
+
+.writer{
+    margin:0;
+}
+
+#second{
+    
+    display:flex;
+    flex-direction:column;
+    
+}
+
+#others{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.others-list{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.others-box{
+    flex:1 1 100%;
+
+    margin: 10px;
+    padding: 3%;
+    width: 25%;
+}
+
+
+
