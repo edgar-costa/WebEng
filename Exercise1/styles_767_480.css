@@ -20,6 +20,9 @@ header p{
  About me
 ****************************
   */
+.partDesigner {
+    margin-top: 30px;
+}
 
 .partDesigner p{
 	width: 90%;
@@ -27,6 +30,7 @@ header p{
 
 .partCoder{
 	padding-top:20px;
+    padding-bottom: 60px;
 }
 
 .partcoder hr{
@@ -58,8 +62,7 @@ hr{
 
  .skill_sqr{
  	height: 300px;
- }
-
+}
 
  .skills h1{
  	/*opacity: 1;*/
@@ -216,7 +219,7 @@ hr{
 }
 
 .portfolioImages img{
-    width:10%;
+    width:600px;
 }   
 
 .singleImage{
@@ -225,10 +228,6 @@ hr{
    	margin:0 0 2px 0 ;
    	width: 100%;
 }
-
-/*.singleImage:nth-child(3) img{
-    width: 650px;
-}*/
 
 /* Hide 1 and 4 singleImage*/
 .singleImage:nth-child(1){
@@ -266,7 +265,6 @@ hr{
     color: white;
     background-color: #2f2f2f;
     padding: 5px;
-    margin:0;
     text-transform: uppercase;   
 }
 
