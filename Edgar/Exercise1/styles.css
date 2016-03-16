@@ -354,8 +354,8 @@ header p:first-of-type{
     
     display: flex;
     flex-direction: row;
-    max-width: 94%;
-    padding-left: 3%;
+    width: 94%;
+
 }   
 
 
@@ -413,55 +413,57 @@ header p:first-of-type{
 /*The parent class instructs that the following divs will be displayed with flex */
 #parent {
 	display:flex;
+
 }
 
 /*The first and second columns will take 40 percent of the page width each. The last column takes only the 20% remaining.*/
 #first {
-	flex:80;
+    flex:80;
+    
 	background-color: white;
 	display: flex;/*Here we instruct that inner objects will be using flex too*/
 	} 
 
 #second {
-	flex:80;
+    flex:80;
 	background-color: white;
-	display:flex;}
+	display:flex;
+}
 	
 /*This is box where the image of the blogger is placed*/
 .writer {
-	flex: 1;
+    flex:0.8;
 	background-color: #2B2B2B;
 	color: white;
 	text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* This applies to the introductory text of the blog entry*/
 .intro{
-	flex: 3;
+    flex:3;
 	padding: 42px;
 }	
 
 /*This one is the third column, with the least recent blog entries (only the title is shown)*/
 #others {
-	flex:20;
+    flex:20;
     display: flex;
+    flex-direction: column;
     padding-left: 15px;
-    align-self: center
-	}
-
-.others-list {
-  
-    list-style-type: none;
-    color: white;
+    color:white;
 }
 
-.others-list p{
+#others p{
     opacity: 0.8;
 }
 
+
+
 .others-box {
 	background-color: #2B2B2B;
-    height: 30%;
+    flex:1 0 100%;
     margin-top: 5px;
     padding: 8%;
 }
@@ -470,8 +472,6 @@ header p:first-of-type{
 	color:#1A8AE0;
     vertical-align: bottom;
 }
-
-
 
 .blog-date {
 	font-weight: normal;
@@ -582,9 +582,4 @@ header p:first-of-type{
 
 
 
-.others-div {
-display: flex;
-flex-direction: column; 
-justify-content: space-between; 
-align-self: center;
-}
+
