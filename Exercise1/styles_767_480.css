@@ -202,7 +202,7 @@ hr{
 }
 
 .portfolioImages img{
-    width:600px;
+    width:590px;
 }   
 
 .singleImage{
@@ -222,11 +222,12 @@ hr{
 }
 
 .singleImage figcaption{
-    width: 100%;
+    width: 98.6%;
+    
 	text-align: center;
     position: relative;
     font-size: 1.2em;
-    margin-left: -7px;
+    margin-left: -4px;
     margin-top: -20px;
     display: flex;
     flex-direction: row;
