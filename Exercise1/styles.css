@@ -373,6 +373,7 @@ header p:first-of-type{
     flex-direction: row;
     background-color: #3498db;
     padding: 8px;
+    font-size: 0.9em;
     justify-content: space-around;
 }
 
