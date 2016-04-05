@@ -1,6 +1,6 @@
 /*======= Initial Variables =========*/
 /* scrollTimer is a Timer that will call the updateMenu() after 2000ms */
-var scrollTimer = setTimeout(updateMenuSizes, 2000);
+var scrollTimer = setTimeout(updateMenuSizes, 1000);
 
 /* Array where the different section ids are saved */
 var sections = new Array('home', 'about', 'portfolio', 'blog', 'contact');
@@ -14,14 +14,14 @@ initSF();
 var MF = 0;
 
 /* Icon size limits*/
-var imgMax = 70;
-var imgMin = 30;
+var imgMax = 63;
+var imgMin = 40;
 
 
 /*======= Main loop =========*/
 $(document).ready(
     // This function is called when the DOM is ready
-    function(){
+    function(){    
         // Every time we scroll, we clear the scrollTimer
         $(window).scroll(function(e) {clearTimeout(scrollTimer); scrollTimer = setTimeout(updateMenuSizes, 2000);});
     }
