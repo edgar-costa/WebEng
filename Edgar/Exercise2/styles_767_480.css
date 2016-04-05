@@ -2,16 +2,16 @@ body {
     font-size: 62.5%;
 }
 
-.nav {
+nav {
     align-self: center;
 }
 
-.nav ul li{
+nav ul li{
 	font-size: 1.7em;
     font-weight: 400;
 }
 
-header p{
+.main_header p{
     font-size: 5em;
 }
 

@@ -16,7 +16,7 @@
 
   <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 	<!-- ==== MENU ==== -->
-	<div class="nav" >
+	<nav>
 		<ul>
             <li><a href="#home">Home<img src="assets/img/Icons/menu-home.png" id="home-icon" /></a></li>
             <li> <a href="#about"> About Me<img src="assets/img/Icons/menu-about.png" id="about-icon" /></a></li>
@@ -24,18 +24,19 @@
             <li> <a href="#blog"> Blog<img src="assets/img/Icons/menu-blog.png" id="blog-icon" /></a></li>
             <li> <a href="#contact"> Contact<img src="assets/img/Icons/menu-contact.png" id="contact-icon" /></a></li>
 		</ul>
-	</div>
+    </nav>   
+      
   	<!-- ==== /MENU ==== -->
 	<!-- ==== HEADER ==== -->
-    <div class="web">
-	<div id="home">
-		<header >
+    <section class="web">
+	<section id="home">
+		<header class="main_header">
 	  		<h1><span ></span></h1>
 	  		<p>A 2.0 web developer.</p>
 	  		<p>At your service</p>
 	  	</header>	    
 
-	</div>
+	</section>
 <!--
     
     <div id="hr_header">
@@ -44,73 +45,78 @@
 -->
         
 	<!-- ==== ABOUT ==== -->
-	<div class ="sectionPadding" id="about">
-		<div>
+    <section>
+	<section class ="sectionPadding" id="about">
+		<article>
 			<br>
+            <header>
 			<h1 class="sectionTitle" >A LITTLE ABOUT MY SELF</h1>
+            </header>
 			<hr>
 				
-			<div>
-				<p>I am a UX/UI Designer and Front End developer from Zurich, Switzerland. I love to solve complex problem, create new and simple design solution for different topics.
+            <p>I am a UX/UI Designer and Front End developer from Zurich, Switzerland. I love to solve complex problem, create new and simple design solution for different topics.
 					I create beautiful, usable, professional websites using best practice accessibility and the latest W3C web standards guidelines, resulting in semantic and seo friendly XHTML and CSS. All my websites are lovingly hand coded. </p>
-			</div>
 			<br>
 			<br>
-			<div>
-				<p>At first I intended to be an animator and went to design school fully motivated to become just that. One thing led to another and 2 years went by and I was a (almost) fully fledged freelance web designer without ever planning to become one.
-					When I am not coding or designing some new websites I am usually at the gym doing boldring. To relax my nerve I like to play videogames with some friends while eating pizza! .</p>
-			</div>
-		</div>
-	</div>
+            <p>At first I intended to be an animator and went to design school fully motivated to become just that. One thing led to another and 2 years went by and I was a (almost) fully fledged freelance web designer without ever planning to become one.
+                When I am not coding or designing some new websites I am usually at the gym doing boldring. To relax my nerve I like to play videogames with some friends while eating pizza! .</p>
+		</article>
+	</section>
 		
 	<!-- ==== SECTION DIVIDER1 -->
 	<section id="group1" class="partDesigner sectionPadding">
-		<div>
+		<article>
+            <header>
 			<h1 class="sectionTitle">PART DESIGNER...</h1>
+            </header>
 			<hr>
 			<p>A web developer needs to have a good aesthetic eye on his product.<br> For this reason part of my skills include user interface and interaction design.</p>
-		</div>
+		</article>
 	</section>
 
 	<!-- ==== SECTION DIVIDER2 -->
 	<section class="partCoder " >
-		<div>
+		<article>
+            <header>
 			<h1 class="sectionTitle">PART CODER!</h1>
+            </header>
 			<hr>
 			<p>But a website cannot be just nice to see... It has to work! That's why we have JavaScript, PHP and CMS like WordPress </p>
-		</div>
+		</article>
 	</section>
 
 	<section class="skills sectionPadding">
-		<div>
+            <header>
 			<h1 class="sectionTitle"> My Technical Skills</h1>
+            </header>
 			<div class="skill_sqr" > <div id="html_skill" ><div class="skill_percentage">95<span>%</span></div> <div class="skill_name">HTML</div></div></div>
 			<div class="skill_sqr" >  <div id="css_skill" ><div class="skill_percentage">80<span>%</span></div> <div class="skill_name" >CSS</div></div></div>
 			<div class="skill_sqr"  > <div id="js_skill" ><div class="skill_percentage">90<span>%</span></div> <div class="skill_name">JavaScript</div> </div></div>
 			<div class="skill_sqr" > <div  id="wp_skill"> <div class="skill_percentage">80<span>%</span></div> <div class="skill_name">WordPress</div> </div></div>
-		</div>
 	</section>
+    </section>
 		
 		<!-- ==== PORTFOLIO ==== -->
-    <div id="portfolio">
+    <section id="portfolio">
+        <header>
 		<br>
-			<div>
 				<br>
 				<h1 class="sectionTitle" >I WORKED ON COOL STUFF</h1>
 				<hr>
 				<br>
-			</div>
-			<div>
+        </header>
+        
+			<section>
 				<div class="buttonsContainer">
 					<div class="button active"> <p>ALL</p></div>
 					<div class="button"> <p> UI DESIGN </p></div>
 					<div class="button"> <p> ANDROID PAGE </p></div>
 				</div>
-			</div>
+			</section>
 			<br>
-			<div class="portfolioImages" >
+			<section class="portfolioImages" >
 				<!-- PORTFOLIO IMAGE 1 -->
-			    	<div class="singleImage">
+			    	<article class="singleImage">
 						<figure>
 							<img  src="assets/img/portfolio/folio01.jpg" alt="">
 							<figcaption>
@@ -127,10 +133,10 @@
 								</div>								
 							</figcaption>
 						</figure>
-			    	</div>
+			    	</article>
 			    	
 				<!-- PORTFOLIO IMAGE 2 -->
-			    	<div class="singleImage">
+			    	<article class="singleImage">
 						<figure>
 							<img  src="assets/img/portfolio/folio02.jpg" alt="">
 							<figcaption>
@@ -147,9 +153,9 @@
 								</div>					
 							</figcaption>
 						</figure>
-			    	</div>
+                </article>
 				<!-- PORTFOLIO IMAGE 3 -->
-			    	<div class="singleImage">
+			    	<article class="singleImage">
 						<figure>
 							<img  src="assets/img/portfolio/folio03.jpg" alt="">
 							<figcaption>
@@ -166,9 +172,9 @@
 								</div>					
 							</figcaption>
 						</figure>
-			    	</div>
+			    	</article>
 				<!-- PORTFOLIO IMAGE 3 -->
-				<div class="singleImage">
+				<article class="singleImage">
 					<figure>
 						<img  src="assets/img/portfolio/folio04.jpg" alt="">
 						<figcaption>
@@ -185,9 +191,9 @@
 								</div>					
 						</figcaption>
 					</figure>
-				</div>
+				</article>
 				<!-- PORTFOLIO IMAGE 3 -->
-				<div class="singleImage" >
+				<article class="singleImage" >
 					<figure>
 						<img  src="assets/img/portfolio/folio05.jpg" alt="">
 						<figcaption>
@@ -204,9 +210,9 @@
 								</div>					
 						</figcaption>
 					</figure>
-				</div>
+				</article>
 			<!-- PORTFOLIO IMAGE 3 -->
-			<div class="singleImage six">
+			<article class="singleImage six">
 				<figure>
 					<img  src="assets/img/portfolio/folio06.jpg" alt="">
 					<figcaption>
@@ -223,24 +229,24 @@
 								</div>					
 					</figcaption>
 				</figure>
-			</div>
-		</div>
-    </div>
+			</article>
+		</section>
+    </section>
 	<br>
 	<br>
       
 	<!-- ==== BLOG ==== -->
-	<div id="blog">
+	<section id="blog">
 		<br>
-		<div >
+		<header >
 			<br>
 			<h1 class="sectionTitle" >MY  PERSONAL BLOG</h1>
 			<hr>
 			<br>
-		</div>
+		</header>
         
-			<div id="parent">
-				<div id="first">
+			<section id="parent">
+				<article id="first">
 					<div class="writer">
 						<br>
 							<p><img  src="assets/img/team/u1.jpg" width="60px" height="60px"></p>
@@ -254,9 +260,9 @@
 						<p><a href="#" > Read More</a></p>
 						<br>
 					</div>
-				</div>
+				</article>
 				
-				<div id='second'>
+				<article id='second'>
 					<div class="writer">
 					<br>
 						<p><img  src="assets/img/team/u1.jpg" width="60px" height="60px"></p>
@@ -270,8 +276,8 @@
 						<p><a href="#" > Read More</a></p>
 						<br>
 					</div>
-                </div>
-				<div id="others">
+                </article>
+				<aside id="others">
 					<div class="others-list">
 				            <div class="others-box">
 							 <p> Parallax Tutorial</p> <p class="blog-date"> Dec. 2015</p>
@@ -286,33 +292,39 @@
 							 <p><a href="#" > Read More</a></p>
                             </div>
 		     </div>
-		  </div>
+		  </aside>
 			<br>
 			<br>
-	</div>
-    </div>
+	</section>
+    </section>
 
 		
 		<!-- ==== SECTION DIVIDER ==== -->
      <section class="craftedinZurich" >
-			<div>
+         <header>
 				<h1>CRAFTED IN ZURICH, SWITZERLAND.</h1>
 				<hr>
+         </header>
+         
+         <footer>
 				<p>Paradeplatz 987,</p>
 				<p>+0041 9884 4893</p>
 				<p><a  href="#"></a>  <a  href="#"></a></p>
-			</div>
+        </footer>
+         
      </section>
 		
-     <div class="sectionPadding contact" id="contact">
-			<div>
+     <section class="sectionPadding contact" id="contact">
+         <header>
 			<br>	
 				<h1 class="sectionTitle" >THANKS FOR VISITING!</h1>
 				<hr>
 				<br>
 				<br>
-				<div class="columns">
-				<div class="column-left">
+         </header>
+         
+        <section class="columns">
+            <article class="column-left">
 					<h3>Contact Information</h3>
 					<p> <span></span> Paradeplatz, Zurich<br>
 				        <span></span> +0041 9884 4893<br>
@@ -321,9 +333,9 @@
 						<span></span> <a href="#"> @mrdesignrobot </a> <br>
 						<span></span> <a href="#"> Mr Design Luigi</a> <br>
 					</p>
-				</div>
-				
-				<div class="column-center">
+            </article>
+		  		
+            <article class="column-center">
 					<h3>Newsletter</h3>
 					<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
 					<p>
@@ -347,22 +359,23 @@
 						  </div>
 					   </form>
 					</p>
-				</div>
+		      </article>
 				
-				<div class="column-right" >
+            <article class="column-right" >
 					<h3>Support Us</h3>
 					<p>If you would like to support my work and my passion for web crafting please feel free to send me an email, or to share one of my project on tweeter or facebook. Any small little thing will be appreciated!</p>
-				</div>
-				</div>
-			</div>
+            </article>
+         </section>
 		
-		</div>
-          </div>
+		</section>
+      
+</section>
 
-		<div class="pg_footer">
-			<div >
+		<footer class="pg_footer">
+			<header >
 				<h4>Created by <a href="http://globis.co">globis</a> </h4>
-			</div>
-		</div>
-  </body>
+			</header>
+		</footer>
+
+</body>
 </html>

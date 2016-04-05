@@ -52,7 +52,7 @@ h1{
  Navigation
  ****************************
   */
-.nav{
+nav{
 		
 	position: fixed;
 	width:100%;
@@ -62,14 +62,14 @@ h1{
 
 	
 }
-.nav ul{
+nav ul{
 	display: flex;
 	flex-direction: row; 
 	justify-content:  center ;
 
 
 }
-.nav ul li{
+nav ul li{
 	text-align: center;
 	font-size: 1.3em;
 	opacity: 0.8;
@@ -85,12 +85,12 @@ h1{
 
 
 
-header p{
+.main_header p{
 	 
 	font-size: 4.0em;
 }
 
-header p:first-of-type{
+.main_header p:first-of-type{
 	margin-top: 40vh;
 	}
 

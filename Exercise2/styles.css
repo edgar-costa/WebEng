@@ -83,24 +83,24 @@ hr{
  Navigation
  ****************************
   */
-.nav{
+nav{
 	position: fixed;
 	width:100%;
 	background: #2B2B2B;
 	padding: 20px 0px;
     z-index: 1;
 }
-.nav ul{
+nav ul{
 	padding: 0 15px;
 }
-.nav ul li{
+nav ul li{
 	display: inline-block;
 	margin-right: 25px;
 	font-size: 1.8em;
 	opacity: 0.8;
 }
 
-.nav a{
+nav a{
 	color:white;
 	list-style-type: none;
 	text-decoration: none;
@@ -112,7 +112,7 @@ hr{
  ****************************
   */
 
-header{
+.main_header{
 	background: url("./assets/img/header_bg2.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
@@ -123,7 +123,7 @@ header{
 	border:white solid 1px; /* if I don't this it shifts down, wtf? */
 }
 
-header p{
+.main_header p{
     font-family: 'sans-serif';
     font-size: 7.2em;
     margin: 0 auto;
@@ -132,7 +132,7 @@ header p{
 }
 
 
-header p:first-of-type{
+.main_header p:first-of-type{
 	margin-top: 40vh;
 }
 
