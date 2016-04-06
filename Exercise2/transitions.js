@@ -32,7 +32,12 @@ function addClassIfInView($a){
     }
   });
 }
-
+$(document).ready(
+  function(){    
+       check_if_in_view();
+    }
+  
+);
 
 $window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
+//$window.trigger('scroll');
