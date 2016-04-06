@@ -436,7 +436,7 @@ nav a{
     color: white;
     background-color: #2f2f2f;
     padding: 5px;
-    transition: all 2.0s ease;	
+    transition: all 0.0s ease;	
 	
 
 }
@@ -445,6 +445,7 @@ nav a{
 	text-align: center;
 	transform:rotateY(360deg);
 	margin-bottom: 2%;
+	transition: all 2.0s ease;	
 }
 
 
