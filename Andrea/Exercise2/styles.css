@@ -83,36 +83,36 @@ hr{
  Navigation
  ****************************
   */
-nav{
+.nav{
 	position: fixed;
 	width:100%;
 	background: #2B2B2B;
 	padding: 20px 0px;
     z-index: 1;
 }
-nav ul{
+.nav ul{
 	padding: 0 15px;
 }
-nav ul li{
+.nav ul li{
 	display: inline-block;
 	margin-right: 25px;
 	font-size: 1.8em;
 	opacity: 0.8;
 }
 
-nav a{
+.nav a{
 	color:white;
 	list-style-type: none;
 	text-decoration: none;
 }
-
-/*
-****************************
+	
+/*	
+****************************	
  Header
  ****************************
   */
 
-.main_header{
+header{
 	background: url("./assets/img/header_bg2.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
@@ -121,19 +121,28 @@ nav a{
     background-position: center;
 	text-align: center;
 	border:white solid 1px; /* if I don't this it shifts down, wtf? */
+	border:blue solid 3px;
+
 }
 
-.main_header p{
+
+header p{
+
+	
     font-family: 'sans-serif';
     font-size: 7.2em;
     margin: 0 auto;
     opacity: 1;
     text-shadow: 1px 3px white;
-}
+   	
+   
+}	
 
 
-.main_header p:first-of-type{
+
+header p:first-of-type{
 	margin-top: 40vh;
+
 }
 
 
@@ -622,11 +631,7 @@ font-size: 1.8em;
 	color: #1A8AE0 ;
 }
 
-/*
-****************************
- Page Footer
- ****************************
-  */
+	
 
   .pg_footer{
   	padding: 70px;
@@ -651,7 +656,6 @@ font-size: 1.8em;
 
 
 
-
 /*
 ****************************
  Animations
@@ -659,48 +663,14 @@ font-size: 1.8em;
   */
 
 
-.slideInLeft{
-	  opacity: 1;
-  -moz-transition: all 1s linear;
-  -webkit-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  transition: all 1s linear;
-  -moz-transform: translate3d(-100%, 0px, 0px);
-  -webkit-transform: translate3d(-100%, 0px, 0px);
-  -o-transform: translate(-100%, 0px);
-  -ms-transform: translate(-100%, 0px);
-  transform: translate3d(-100%, 0px, 0px);
+@keyframes slideInFromBottom{
+	 0%   {transform: translateY(50px);}
+    100% {transform: translateY(0px);}
 }
 
-.slideInLeft.in-view {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.slideInBottom{
-	  opacity: 1;
-  -moz-transition: all 1s linear;
-  -webkit-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  transition: all 1s linear;
-  -moz-transform: translate3d(0px, 200px, 0px);
-  -webkit-transform: translate3d(0px, 200px, 0px);
-  -o-transform: translate(0px, 200px);
-  -ms-transform: translate(0px, 200px);
-  transform: translate3d(0px, 200px, 0px);
-}
-
-.slideInBottom.in-view {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
+@keyframs slideInFromLeft{
+	0%   {transform: translateY(50px);}
+    100% {transform: translateY(0px);}
 }
 
 
