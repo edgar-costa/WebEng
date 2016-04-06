@@ -339,11 +339,11 @@ nav a{
     margin: 0 auto;
     background-color: #808080;
     color: white;
-    padding: 5px
+    padding: 5px;
 }
 
 .button p{
-    font-size: 1.6em;
+    font-size:1.6em;
     opacity: 1;
 }
 
