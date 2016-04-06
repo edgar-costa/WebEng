@@ -18,6 +18,7 @@ function addClassIfInView($a){
     var window_bottom_position = (window_top_position + window_height);
 
     $.each($a, function() {
+
     var $element = $(this);
     var element_height = $element.outerHeight();
     var element_top_position = $element.offset().top;
@@ -27,8 +28,7 @@ function addClassIfInView($a){
     if ((element_bottom_position >= window_top_position) &&
         (element_top_position <= window_bottom_position)) {
       $element.addClass('in-view');
-    } else {
-      $element.removeClass('in-view');
+    
     }
   });
 }
