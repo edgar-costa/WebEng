@@ -107,10 +107,6 @@ nav ul li{
     text-align: center;
 }
 
-.icon {
-    display: flex;
-    flex-direction: row;
-}
 
 .iconn a img {
     display: flex;
