@@ -82,22 +82,38 @@ hr{
 ****************************
  Navigation
  ****************************
-  */
+*/
 nav{
 	position: fixed;
 	width:100%;
 	background: #2B2B2B;
-	padding: 20px 0px;
+	padding: 0px 0px 5px;
     z-index: 1;
 }
 nav ul{
 	padding: 0 15px;
 }
+
 nav ul li{
 	display: inline-block;
-	margin-right: 25px;
 	font-size: 1.8em;
+    width: 5%;
+    padding: 10px;
 	opacity: 0.8;
+    align-content: center;
+}
+
+.iconname {
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconn a img {
+    display: flex;
 }
 
 nav a{
