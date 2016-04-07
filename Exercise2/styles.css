@@ -118,6 +118,19 @@ nav a{
 	text-decoration: none;
 }
 
+/*Correct hrefs*/
+
+
+
+.link{
+    padding-top:125px;
+    margin-top: -125px;
+}
+
+.link2{
+    padding-top:60px;
+    margin-top: -60px;
+}
 /*
 ****************************
  Header
@@ -329,6 +342,10 @@ nav a{
 /*PORTFOLIO*/
 /*===========================*/
 
+#portfolio{
+    margin-bottom: 60px;
+}
+
 .buttonsContainer {
     display: flex;
     flex-direction: row;
@@ -358,6 +375,7 @@ nav a{
 
 /*IMAGES*/
 /*================================*/
+
 
 .portfolioImages {
 
@@ -435,7 +453,7 @@ nav a{
 
 
 
-.singleImage a {
+.singleImage a.takeLook{
     font-size: 1.6em;
     color: white;
     background-color: #2f2f2f;
@@ -444,7 +462,8 @@ nav a{
 	
 
 }
-.singleImage:hover a{
+
+.singleImage:hover a.takeLook{
 	width:80%;
 	text-align: center;
 	transform:rotateY(360deg);
@@ -463,7 +482,7 @@ nav a{
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.75);
 	z-index: 99999;
 	opacity:0;
 	-webkit-transition: opacity 400ms ease-in;
@@ -477,14 +496,17 @@ nav a{
 	pointer-events: auto;
 }
 
-.modalDialog .close{
+.modalDialog a.close{
+    display:inline-block;
 	position: absolute;
 	top: 4%;
-   right: 6%;
+    right: 6%;
+    padding: 4px;
+    z-index: 1;
    
 }
 .singleImage a.close{
- 	font-size: 1.7em;
+   font-size: 1.7em;
    color: #2f2f2f;
    background-color: rgba(234, 226,226, 0);
    font-weight: bold;
@@ -510,7 +532,7 @@ font-size: 1.8em;
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
-	background: #EAE2E2;
+	background: #ffffff;
 	#background: -moz-linear-gradient(#fff, #999);
 	#background: -webkit-linear-gradient(#fff, #999);
 	#background: -o-linear-gradient(#fff, #999);
