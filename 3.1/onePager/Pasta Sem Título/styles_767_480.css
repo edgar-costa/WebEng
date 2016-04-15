@@ -1,0 +1,362 @@
+body {
+    font-size: 62.5%;
+}
+
+nav {
+    align-self: center;
+}
+
+nav ul li{
+	font-size: 1.7em;
+    font-weight: 400;
+}
+
+.main_header p{
+    font-size: 5em;
+}
+
+/****************************
+ About me
+****************************/
+.partDesigner {
+    margin-top: 30px;
+}
+
+.partDesigner p{
+	width: 90%;
+}
+
+.partCoder{
+	padding-top:20px;
+    padding-bottom: 60px;
+}
+
+.partcoder hr{
+    width: 60%;
+}
+
+.partCoder p{
+	width:90%
+}
+
+hr{
+	width: 80%;
+	margin:0 auto;
+	margin-bottom: 40px;
+}
+
+.sectionTitle{
+	text-align: center;
+	font-size: 3em;
+	font-weight:200;
+	padding-top: 30px;
+}
+
+/****************************
+ Part Skills
+*****************************/
+
+.skill_sqr{
+ 	height: 300px;
+}
+
+.skills h1{
+ 	/*opacity: 1;*/
+ 	color:black;
+ }
+
+.skills{
+	background-color: #f5f5f5;
+	position:relative;
+}
+
+.skill_sqr{
+ 	display:block;
+ 	width: inherit;
+ 	margin: 6px 0.5%;
+ 	height: 100px;
+ 	position:relative;
+ 	text-align: left;
+ }
+
+#html_skill{
+ 	position: absolute;
+ 	outline:black;
+ 	width:95%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #69B7AE; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right,#A7D6D1, #69B7AE ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,#A7D6D1, #69B7AE ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,#A7D6D1, #69B7AE ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left,#A7D6D1, #69B7AE ); /* Standard syntax */
+ }
+
+#css_skill{
+ 	position:absolute;
+ 	width:80%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #E2B0A0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #F3D9D2, #E2B0A0 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #F3D9D2, #E2B0A0 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #F3D9D2, #E2B0A0 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #F3D9D2, #E2B0A0 ); /* Standard syntax */
+ }
+
+#js_skill{
+ 	position:absolute;
+ 	width:90%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #E2B340; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #ECC15A, #E2B340 ); /* Standard syntax */
+ }
+ 
+#wp_skill{
+ 	position:absolute;
+ 	width:80%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #C49965; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #DAB780, #C49965 ); /* Standard syntax */
+ }
+
+.skill_name{
+	position:absolute;
+	bottom:30px;
+	margin-left: 5%;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size:2.5em;
+	font-weight: 400;
+	color:white; 
+	text-shadow: 0px -.5px rgba(0, 0, 0, 1);
+}
+
+.skill_percentage{
+	position:initial;
+	bottom:50px;
+	margin-left: 56%;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size:4.5em;
+	font-weight: 500;
+	color:white;
+	opacity: 0.4;
+ }
+
+.skill_percentage span {
+    vertical-align: middle;    
+}
+
+/****************************
+ Portofolio
+*****************************/
+
+#portfolio br{
+	display:none;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.button{
+    width: 27%;
+    margin: 0 auto;
+    background-color: #808080;
+    color: white;
+    padding: 11px;
+}
+
+.button p{
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+/*for the greeen active button*/
+.active {
+    background-color: #32cd32;
+}
+
+/*IMAGES*/
+
+.portfolioImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.portfolioImages img{
+    width:590px;
+}   
+
+.singleImage{
+	/* border: red 3px solid; */
+    align-self: center;
+   	margin:0 0 2px 0 ;
+   	width: 100%;
+}
+
+/* Hide 1 and 4 singleImage*/
+.singleImage:nth-child(1){
+	display:none;
+}
+
+.singleImage:nth-child(4){
+	display:none;
+}
+
+.singleImage figcaption{
+    width: 98.6%;
+    
+	text-align: center;
+    position: relative;
+    font-size: 1.2em;
+    margin-left: -4px;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #3498db; 
+    justify-content: center;
+}
+
+.singleImage h5 {
+	text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    padding: 8px;
+	flex:1;
+    
+}
+
+.singleImage a {
+	flex:1;
+    color: white;
+    background-color: #2f2f2f;
+    padding: 5px;
+    text-transform: uppercase;   
+}
+
+/****************************
+ Blog
+*****************************/
+
+.columns {
+    display: block;
+}
+
+.intro h2{
+    font-size: 2em;
+}
+
+#parent {
+	display: block;
+}
+
+#first {
+    display: block;
+}
+
+#second{
+    display:block;
+}
+
+#others{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.others-list{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.others-box{
+    flex:1 1 100%;
+    margin: 10px;
+    padding: 3%;
+    width: 25%;
+}
+
+.writer h4 {
+    font-size: 1.7em;
+}
+
+p.blog-date {
+	font-weight: normal;
+	font-size: 1.3em;
+}
+
+.blog-date {
+	font-weight: normal;
+	font-size: 1.3em;
+}
+
+/*****************************
+ Contact
+*****************************/
+
+.craftedinZurich h1 {
+    font-size:3.5em;
+    font-weight: 200;
+}
+
+.craftedinZurich p {
+    font-size:3em;
+    font-weight: 200;
+}
+
+.columns {
+    display: block;
+}
+
+.columns h3{
+    font-size: 2em;
+}
+
+.columns p{
+    font-size: 1.7em;
+}
+
+.column-left{
+    padding-bottom: 8%;
+    flex:none;
+}
+
+.column-center{
+   padding-bottom: 10%;
+   flex: none;
+}
+
+.column-right{
+     padding-bottom: 0%;
+    flex: none;
+}
+
+.contact{
+    padding:  vh 8vw;
+	padding-bottom: 100px;
+}
+
+
+
