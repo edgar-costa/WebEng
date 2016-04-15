@@ -1,3 +1,6 @@
+NOTE: you have to put the folder “onePager” in wordpress>wp-content->themes
+
+
 Things that are still missing:
 
 - Background color (see Exercise 3.1 description)
