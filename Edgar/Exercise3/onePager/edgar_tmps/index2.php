@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title> J. O. Rob main page</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
 	<!-- Custom Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
     <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,500' rel='stylesheet' type='text/css'/>
-    <script src="jquery-2.2.2.min.js"></script>
-    <script src="main.js"></script>
-    <script src="transitions.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/jquery-2.2.2.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/main.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/transitions.js"></script>
     
   </head>
 

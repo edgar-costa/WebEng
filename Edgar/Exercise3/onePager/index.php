@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>
   <head>
     <meta charset="utf-8">
     <title> J. O. Rob main page</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
 	<!-- Custom Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
     <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,500' rel='stylesheet' type='text/css'/>
-    <script src="jquery-2.2.2.min.js"></script>
-    <script src="main.js"></script>
-    <script src="transitions.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/jquery-2.2.2.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/main.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/transitions.js"></script>
     
   </head>
 
@@ -19,23 +19,23 @@
 		<ul>
             <li>
                 <div class="iconname"><a href="#home">Home</a></div>
-                <div class="iconn"><a href="#home"><img src="assets/img/Icons/menu-home.png" id="home-icon" /></a></div>
+                <div class="iconn"><a href="#home"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-home.png" id="home-icon" /></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#about"> About Me</a></div>
-                <div class="iconn"><a href="#about"> <img src="assets/img/Icons/menu-about.png" id="about-icon" /></a></div>
+                <div class="iconn"><a href="#about"> <img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-about.png" id="about-icon" /></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#portfolio"> Portfolio</a></div>
-                <div class="iconn"><a href="#portfolio"><img src="assets/img/Icons/menu-portfolio.png" id="portfolio-icon"/></a></div>
+                <div class="iconn"><a href="#portfolio"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-portfolio.png" id="portfolio-icon"/></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#blog"> Blog</a></div>
-                <div class="iconn"><a href="#blog"><img src="assets/img/Icons/menu-blog.png" id="blog-icon" /></a></div>
+                <div class="iconn"><a href="#blog"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-blog.png" id="blog-icon" /></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#contact"> Contact</a></div>
-                <div class="iconn"><a href="#contact"><img src="assets/img/Icons/menu-contact.png" id="contact-icon" /></a></div>
+                <div class="iconn"><a href="#contact"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-contact.png" id="contact-icon" /></a></div>
             </li>
 		</ul>
     </nav>   
@@ -132,7 +132,7 @@
 				<!-- PORTFOLIO IMAGE 1 -->
 			    	<article class="singleImage">
 						<figure> 
-							<img src="assets/img/portfolio/folio01.jpg" alt="">
+							<img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
 							<figcaption>
 								<h5>UI DESIGN</h5>
                                 <a class="takeLook" data-toggle="modal" href="#myModal1" >Take a Look</a>
@@ -140,7 +140,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="assets/img/portfolio/folio01.jpg" alt="">
+									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -152,7 +152,7 @@
 				<!-- PORTFOLIO IMAGE 2 -->
 			    	<article class="singleImage">
 						<figure>
-							<img  src="assets/img/portfolio/folio02.jpg" alt="">
+							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio02.jpg" alt="">
 							<figcaption>
 								<h5>UI DESIGN</h5>
 								<a class="takeLook" data-toggle="modal" href="#myModal2" >Take a Look</a>
@@ -160,7 +160,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="assets/img/portfolio/folio02.jpg" alt="">
+									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio02.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -171,7 +171,7 @@
 				<!-- PORTFOLIO IMAGE 3 -->
 			    	<article class="singleImage">
 						<figure>
-							<img  src="assets/img/portfolio/folio03.jpg" alt="">
+							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
 							<figcaption>
 								<h5>ANDROID PAGE</h5>
 								<a class="takeLook" data-toggle="modal" href="#myModal3" >Take a Look</a>
@@ -179,7 +179,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="assets/img/portfolio/folio03.jpg" alt="">
+									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -190,7 +190,7 @@
 				<!-- PORTFOLIO IMAGE 3 -->
 				<article class="singleImage">
 					<figure>
-						<img  src="assets/img/portfolio/folio04.jpg" alt="">
+						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
 						<figcaption>
 							<h5>ANDROID PAGE</h5>
 							<a class="takeLook" data-toggle="modal" href="#myModal4" >Take a Look</a>
@@ -198,7 +198,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="assets/img/portfolio/folio04.jpg" alt="">
+									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -209,7 +209,7 @@
 				<!-- PORTFOLIO IMAGE 3 -->
 				<article class="singleImage" >
 					<figure>
-						<img  src="assets/img/portfolio/folio05.jpg" alt="">
+						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
 						<figcaption>
 							<h5>ANDROID PAGE</h5>
 							<a class="takeLook" data-toggle="modal" href="#myModal5" >Take a Look</a>
@@ -217,7 +217,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="assets/img/portfolio/folio05.jpg" alt="">
+									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -228,7 +228,7 @@
 			<!-- PORTFOLIO IMAGE 3 -->
 			<article class="singleImage six">
 				<figure>
-					<img  src="assets/img/portfolio/folio06.jpg" alt="">
+					<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
 					<figcaption>
 						<h5>ANDROID PAGE</h5>
 						<a class="takeLook" data-toggle="modal" href="#myModal6" >Take a Look</a>
@@ -236,7 +236,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="assets/img/portfolio/folio06.jpg" alt="">
+									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -263,7 +263,7 @@
 				<article id="first" class="slideInLeft">
 					<div class="writer">
 						<br>
-							<p><img  src="assets/img/team/u1.jpg" width="60px" height="60px"></p>
+							<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
 							<h4>Pinco Pallino</h4>
 							<h5 class="blog-date">Published Feb 28.</h5>
 					</div>
@@ -279,7 +279,7 @@
 				<article id='second' class="slideInLeft"	>
 					<div class="writer">
 					<br>
-						<p><img  src="assets/img/team/u1.jpg" width="60px" height="60px"></p>
+						<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
 						<h4>Pinco Pallino</h4>
 						<h5 class="blog-date">Published Feb 02.</h5>
 					</div>
@@ -396,3 +396,5 @@
 </body>
 
 </html>
+
+

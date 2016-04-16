@@ -15,7 +15,7 @@ var MF = 0;
 
 /* Icon size limits*/
 var imgMax = 63;
-var imgMin = 30;
+var imgMin = 40;
 
 
 /*======= Main loop =========*/
