@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title> J. O. Rob main page</title>
+    <title> <?php bloginfo('name'); ?> </title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
 	<!-- Custom Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
@@ -84,7 +84,7 @@
 	<section id="group1" class="partDesigner sectionPadding ">
 		<article class ="slideInBottom">
 		<?php
-				$query = new WP_Query('pagename=job2');
+				$query = new WP_Query('pagename=job1');
 				while ( $query->have_posts() ):
 				$query->the_post();  ?>
             <header>
@@ -314,7 +314,7 @@
 						<br>
 							<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
 							<h4><?php the_author(); ?></h4>
-							<h5 class="blog-date">Published <?php the_date(); ?>.</h5>
+							<h5 class="blog-date">Published <?php the_time('F j,Y'); ?>.</h5>
 					</div>
 					<div class="intro">
 						<h2><?php the_title(); ?></h2>
@@ -334,7 +334,7 @@
 					<br>
 						<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
 						<h4><?php the_author(); ?></h4>
-						<h5 class="blog-date">Published <?php the_date(); ?>.</h5>
+						<h5 class="blog-date">Published <?php the_time('F j,Y'); ?>.</h5>
 					</div>
 					<div class="intro">
 						<h2><?php the_title(); ?></h2>
@@ -350,7 +350,7 @@
 					<div class="others-list slideInBottom">
 						<?php if ( have_posts() ) : while ( $the_query_others->have_posts() ) : $the_query_others->the_post(); ?>
 				            <div class="others-box">
-							 <p> <?php the_title(); ?></p> <p class="blog-date"> <?php the_date(); ?></p>
+							 <p> <?php the_title(); ?></p> <p class="blog-date"> <?php the_time('F j,Y'); ?></p>
 							 <p><a href="<?php the_permalink(); ?>" > Read More</a></p>
 							</div>
 							<?php endwhile; else: ?>
