@@ -143,9 +143,9 @@
         
 			<section>
 				<div class="buttonsContainer">
-					<div class="button active"> <p>ALL</p></div>
-					<div class="button"> <p> UI DESIGN </p></div>
-					<div class="button"> <p> ANDROID PAGE </p></div>
+					<a href="#all" class="button active"> <p>ALL</p></a>
+					<a href="#ui_design" class="button"> <p> UI DESIGN </p></a>
+					<a href="#android_page" class="button"> <p> ANDROID PAGE </p></a>
 				</div>
 			</section>
 			<br>
@@ -334,7 +334,7 @@
 					<br>
 						<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
 						<h4><?php the_author(); ?></h4>
-						<h5 class="blog-date">Published <?php the_date(); ?>.</h5>
+						<h5 class="blog-date">Published <?php the_time('F j,Y'); ?>.</h5>
 					</div>
 					<div class="intro">
 						<h2><?php the_title(); ?></h2>
@@ -350,7 +350,7 @@
 					<div class="others-list slideInBottom">
 						<?php if ( have_posts() ) : while ( $the_query_others->have_posts() ) : $the_query_others->the_post(); ?>
 				            <div class="others-box">
-							 <p> <?php the_title(); ?></p> <p class="blog-date"> <?php the_date(); ?></p>
+							 <p> <?php the_title(); ?></p> <p class="blog-date"> <?php the_time('F j,Y'); ?></p>
 							 <p><a href="<?php the_permalink(); ?>" > Read More</a></p>
 							</div>
 							<?php endwhile; else: ?>

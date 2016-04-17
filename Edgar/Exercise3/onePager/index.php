@@ -143,9 +143,9 @@
         
 			<section>
 				<div class="buttonsContainer">
-					<div class="button active"> <p>ALL</p></div>
-					<div class="button"> <p> UI DESIGN </p></div>
-					<div class="button"> <p> ANDROID PAGE </p></div>
+					<a href="#all" class="button active"> <p>ALL</p></a>
+					<a href="#ui_design" class="button"> <p> UI DESIGN </p></a>
+					<a href="#android_page" class="button"> <p> ANDROID PAGE </p></a>
 				</div>
 			</section>
 			<br>
