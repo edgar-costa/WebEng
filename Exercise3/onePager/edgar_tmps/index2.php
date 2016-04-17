@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>
+<html lang="en">
   <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <title> <?php bloginfo('name'); ?> </title>
+    <meta charset="utf-8">
+    <title> J. O. Rob main page</title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
 	<!-- Custom Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
@@ -11,7 +11,6 @@
     <script src="<?php bloginfo('template_url'); ?>/main.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/transitions.js"></script>
     
-    <?php wp_head(); ?>
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -20,23 +19,23 @@
 		<ul>
             <li>
                 <div class="iconname"><a href="#home">Home</a></div>
-                <div class="iconn"><a href="#home"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-home.png" id="home-icon" /></a></div>
+                <div class="iconn"><a href="#home"><img src="assets/img/Icons/menu-home.png" id="home-icon" /></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#about"> About Me</a></div>
-                <div class="iconn"><a href="#about"> <img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-about.png" id="about-icon" /></a></div>
+                <div class="iconn"><a href="#about"> <img src="assets/img/Icons/menu-about.png" id="about-icon" /></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#portfolio"> Portfolio</a></div>
-                <div class="iconn"><a href="#portfolio"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-portfolio.png" id="portfolio-icon"/></a></div>
+                <div class="iconn"><a href="#portfolio"><img src="assets/img/Icons/menu-portfolio.png" id="portfolio-icon"/></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#blog"> Blog</a></div>
-                <div class="iconn"><a href="#blog"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-blog.png" id="blog-icon" /></a></div>
+                <div class="iconn"><a href="#blog"><img src="assets/img/Icons/menu-blog.png" id="blog-icon" /></a></div>
             </li>
             <li>
                 <div class="iconname"><a href="#contact"> Contact</a></div>
-                <div class="iconn"><a href="#contact"><img src="<?php bloginfo('template_url'); ?>/assets/img/Icons/menu-contact.png" id="contact-icon" /></a></div>
+                <div class="iconn"><a href="#contact"><img src="assets/img/Icons/menu-contact.png" id="contact-icon" /></a></div>
             </li>
 		</ul>
     </nav>   
@@ -47,10 +46,8 @@
 	<section id="home">
 		<header class="main_header">
 	  		<h1><span ></span></h1>
-			<p>
-	            <?php bloginfo('description'); ?>
-			</p>
-
+	  		<p class="slideInBottom">A 2.0 web developer.</p>
+	  		<p class="slideInBottom">At your service</p>
 	  	</header>	    
 
 	</section>
@@ -65,59 +62,41 @@
     <section>
 	<section class ="sectionPadding slideInLeft link" id="about">
 		<article>
-			<?php
-				$aboutPageQuery = new WP_Query('pagename=about');
-				while ( $aboutPageQuery->have_posts() ):
-				$aboutPageQuery->the_post();  ?>
 			<br>
             <header>
-			<h1 class="sectionTitle" ><?php  the_title();?></h1>
+			<h1 class="sectionTitle" >A LITTLE ABOUT MY SELF</h1>
             </header>
 			<hr>
 				
-            		<p><?php  the_content();?></p>
+            <p>I am a UX/UI Designer and Front End developer from Zurich, Switzerland. I love to solve complex problem, create new and simple design solution for different topics.
+					I create beautiful, usable, professional websites using best practice accessibility and the latest W3C web standards guidelines, resulting in semantic and seo friendly XHTML and CSS. All my websites are lovingly hand coded. </p>
+			<br>
+			<br>
+            <p>At first I intended to be an animator and went to design school fully motivated to become just that. One thing led to another and 2 years went by and I was a (almost) fully fledged freelance web designer without ever planning to become one.
+                When I am not coding or designing some new websites I am usually at the gym doing boldring. To relax my nerve I like to play videogames with some friends while eating pizza! .</p>
 		</article>
-		<?php endwhile; ?>
 	</section>
 		
 	<!-- ==== SECTION DIVIDER1 -->
 	<section id="group1" class="partDesigner sectionPadding ">
 		<article class ="slideInBottom">
-		<?php
-				$query = new WP_Query('pagename=job1');
-				while ( $query->have_posts() ):
-				$query->the_post();  ?>
             <header>
-			<h1 class="sectionTitle"><?php the_title(); ?></h1>
+			<h1 class="sectionTitle">PART DESIGNER...</h1>
             </header>
 			<hr>
-			<p>	<?php  
-					the_content(); 
-				?>
-			</p>
-
+			<p>A web developer needs to have a good aesthetic eye on his product.<br> For this reason part of my skills include user interface and interaction design.</p>
 		</article>
-		<?php endwhile; ?>
 	</section>
 
 	<!-- ==== SECTION DIVIDER2 -->
 	<section class="partCoder " >
 		<article class = "slideInLeft">
-			<?php
-				$query = new WP_Query('pagename=job2');
-				while ( $query->have_posts() ):
-				$query->the_post();  ?>
             <header>
-			<h1 class="sectionTitle"><?php  
-					the_title();
-				?></h1>
+			<h1 class="sectionTitle">PART CODER!</h1>
             </header>
 			<hr>
-			<p><?php  
-					the_content(); 
-				?> </p>
+			<p>But a website cannot be just nice to see... It has to work! That's why we have JavaScript, PHP and CMS like WordPress </p>
 		</article>
-		<?php endwhile; ?>
 	</section>
 
 	<section class="skills sectionPadding slideInBottom">
@@ -141,19 +120,19 @@
 				<br>
         </header>
         
-			<section class="buttonsLink">
+			<section>
 				<div class="buttonsContainer">
-					<a href="#!" data-filter="all" class="button active"> <p>ALL</p></a>
-					<a href="#!" data-filter="ui" class="button"> <p> UI DESIGN </p></a>
-					<a href="#!" data-filter="android" class="button"> <p> ANDROID PAGE </p></a>
+					<div class="button active"> <p>ALL</p></div>
+					<div class="button"> <p> UI DESIGN </p></div>
+					<div class="button"> <p> ANDROID PAGE </p></div>
 				</div>
 			</section>
 			<br>
 			<section class="portfolioImages" >
 				<!-- PORTFOLIO IMAGE 1 -->
-			    	<article class="singleImage" data-filter="ui">
+			    	<article class="singleImage">
 						<figure> 
-							<img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
+							<img src="assets/img/portfolio/folio01.jpg" alt="">
 							<figcaption>
 								<h5>UI DESIGN</h5>
                                 <a class="takeLook" data-toggle="modal" href="#myModal1" >Take a Look</a>
@@ -161,7 +140,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
+									<img  src="assets/img/portfolio/folio01.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -173,7 +152,7 @@
 				<!-- PORTFOLIO IMAGE 2 -->
 			    	<article class="singleImage">
 						<figure>
-							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio02.jpg" alt="">
+							<img  src="assets/img/portfolio/folio02.jpg" alt="">
 							<figcaption>
 								<h5>UI DESIGN</h5>
 								<a class="takeLook" data-toggle="modal" href="#myModal2" >Take a Look</a>
@@ -181,7 +160,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio02.jpg" alt="">
+									<img  src="assets/img/portfolio/folio02.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -192,7 +171,7 @@
 				<!-- PORTFOLIO IMAGE 3 -->
 			    	<article class="singleImage">
 						<figure>
-							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
+							<img  src="assets/img/portfolio/folio03.jpg" alt="">
 							<figcaption>
 								<h5>ANDROID PAGE</h5>
 								<a class="takeLook" data-toggle="modal" href="#myModal3" >Take a Look</a>
@@ -200,7 +179,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
+									<img  src="assets/img/portfolio/folio03.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -211,7 +190,7 @@
 				<!-- PORTFOLIO IMAGE 3 -->
 				<article class="singleImage">
 					<figure>
-						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
+						<img  src="assets/img/portfolio/folio04.jpg" alt="">
 						<figcaption>
 							<h5>ANDROID PAGE</h5>
 							<a class="takeLook" data-toggle="modal" href="#myModal4" >Take a Look</a>
@@ -219,7 +198,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
+									<img  src="assets/img/portfolio/folio04.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -230,7 +209,7 @@
 				<!-- PORTFOLIO IMAGE 3 -->
 				<article class="singleImage" >
 					<figure>
-						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
+						<img  src="assets/img/portfolio/folio05.jpg" alt="">
 						<figcaption>
 							<h5>ANDROID PAGE</h5>
 							<a class="takeLook" data-toggle="modal" href="#myModal5" >Take a Look</a>
@@ -238,7 +217,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
+									<img  src="assets/img/portfolio/folio05.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -249,7 +228,7 @@
 			<!-- PORTFOLIO IMAGE 3 -->
 			<article class="singleImage six">
 				<figure>
-					<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
+					<img  src="assets/img/portfolio/folio06.jpg" alt="">
 					<figcaption>
 						<h5>ANDROID PAGE</h5>
 						<a class="takeLook" data-toggle="modal" href="#myModal6" >Take a Look</a>
@@ -257,7 +236,7 @@
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
 									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
+									<img  src="assets/img/portfolio/folio06.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
 									</div>
@@ -281,82 +260,53 @@
 		</header>
         
 			<section id="parent">
-				<?php   
-					$args1 = array(
-				    'posts_per_page' => 1,
-				    'orderby'        => 'most_recent',
-				    'offset'         => 0,
-					);
-
-				  $the_query_first = new WP_Query( $args1 );
-
-				  	$args2 = array(
-				    'posts_per_page' => 1,
-				    'orderby'        => 'most_recent',
-				    'offset'         => 1,
-					);
-
-				  $the_query_second= new WP_Query( $args2 );
-
-
-				  	$args3 = array(
-				    'posts_per_page' => 3,
-				    'orderby'        => 'most_recent',
-				    'offset'         => 2,
-					);
-
-				  $the_query_others= new WP_Query( $args3 );
-
-			       ?>
 				<article id="first" class="slideInLeft">
-					<?php if ( have_posts() ) : while ( $the_query_first->have_posts() ) : $the_query_first->the_post(); ?>
 					<div class="writer">
 						<br>
-							<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
-							<h4><?php the_author(); ?></h4>
-							<h5 class="blog-date">Published <?php the_time('F j,Y'); ?>.</h5>
+							<p><img  src="assets/img/team/u1.jpg" width="60px" height="60px"></p>
+							<h4>Pinco Pallino</h4>
+							<h5 class="blog-date">Published Feb 28.</h5>
 					</div>
 					<div class="intro">
-						<h2><?php the_title(); ?></h2>
-						<p>
- 							<?php the_excerpt(); ?>
-						<p>
-						<p><a href="<?php the_permalink(); ?>" > Read More</a></p>
+						<h2>What Define Success</h2>
+						<p>No matter how old you are, where you’re from or what you do for a living, we all share something in common—a desire to be successful. .</p>
+						<p>Each person’s definition of success is different, however, as some may define success as being a loving and faithful spouse or a caring and responsible parent, while most people would equate success with wealth, fame, and power</p>
+						<p><a href="#" > Read More</a></p>
 						<br>
 					</div>
-					<?php endwhile; else: ?>
-       				 <?php endif; ?>
 				</article>
 				
 				<article id='second' class="slideInLeft"	>
-					<?php if ( have_posts() ) : while ( $the_query_second->have_posts() ) : $the_query_second->the_post(); ?>
 					<div class="writer">
 					<br>
-						<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
-						<h4><?php the_author(); ?></h4>
-						<h5 class="blog-date">Published <?php the_time('F j,Y'); ?>.</h5>
+						<p><img  src="assets/img/team/u1.jpg" width="60px" height="60px"></p>
+						<h4>Pinco Pallino</h4>
+						<h5 class="blog-date">Published Feb 02.</h5>
 					</div>
 					<div class="intro">
-						<h2><?php the_title(); ?></h2>
-						<p>  <?php the_excerpt(); ?></p>
-						<p><a href="<?php the_permalink(); ?>" > Read More</a></p>
+						<h2>A Beautiful Story</h2>
+						<p>One day, in a heavily crowded place, a young man was shouting at the crowd. “People look at me; I have the most beautiful heart in the world.”</p>
+						<p>Many people looked at him and were stunned to see the beautiful heart in a perfect shape, no little flaw, which looked quite amazing. Most of the people who saw his heart was mesmerized by the beauty of his heart and praised him. </p>
+						<p><a href="#" > Read More</a></p>
 						<br>
 					</div>
-					<?php endwhile; else: ?>
-
-       				 <?php endif; ?>
                 </article>
 				<aside id="others">
 					<div class="others-list slideInBottom">
-						<?php if ( have_posts() ) : while ( $the_query_others->have_posts() ) : $the_query_others->the_post(); ?>
 				            <div class="others-box">
-							 <p> <?php the_title(); ?></p> <p class="blog-date"> <?php the_time('F j,Y'); ?></p>
-							 <p><a href="<?php the_permalink(); ?>" > Read More</a></p>
+							 <p> Parallax Tutorial</p> <p class="blog-date"> Dec. 2015</p>
+							 <p><a href="#" > Read More</a></p>
 							</div>
-							<?php endwhile; else: ?>
-		             		     </div>
-       					 <?php endif; ?>
-		  		</aside>
+							<div class="others-box">
+							 <p> Positioning in CSS</p> <p class="blog-date"> Nov. 2015</p>
+							 <p><a href="#" > Read More</a></p>
+							</div>						
+							 <div class="others-box">
+							 <p> What is Node.js?</p> <p class="blog-date"> Sep. 2015</p>
+							 <p><a href="#" > Read More</a></p>
+                            </div>
+		     </div>
+		  </aside>
 			<br>
 			<br>
 	</section>
@@ -366,28 +316,19 @@
 		<!-- ==== SECTION DIVIDER ==== -->
      <section class="craftedinZurich " >
      	<div class="slideInLeft">
-
-	    <?php
-                $query = new WP_Query('pagename=location');
-                while ( $query->have_posts() ):
-                $query->the_post();  ?>
-
          <header >
-				<h1><?php the_title();?></h1>
+				<h1>CRAFTED IN ZURICH, SWITZERLAND.</h1>
 				<hr>
          </header>
          
          <footer>
-				<p><?php the_content(); ?></p>
+				<p>Paradeplatz 987,</p>
+				<p>+0041 9884 4893</p>
 				<p><a  href="#"></a>  <a  href="#"></a></p>
         </footer>
         </div>
-         <?php endwhile; ?>
          
      </section>
-
-
-
 		
      <section class="sectionPadding contact" id="contact">
          <header>
@@ -409,8 +350,7 @@
 						<span></span> <a href="#"> Mr Design Luigi</a> <br>
 					</p>
             </article>
-		  	
-	
+		  		
             <article class="column-center slideInBottom">
 					<h3>Newsletter</h3>
 					<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
@@ -456,5 +396,3 @@
 </body>
 
 </html>
-
-

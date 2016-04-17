@@ -478,6 +478,14 @@ nav a{
 	transition: all 2.0s ease;	
 }
 
+/* Image Filter */
+
+.buttonsLink a[data-filter="ui"]:focus ~ .portfolioImages article:not([data-filter="ui"]){
+  display: none;
+
+}
+
+
 
 /*Pop-up window*/
 /*===========================*/

@@ -141,17 +141,17 @@
 				<br>
         </header>
         
-			<section>
+			<section class="buttonsLink">
 				<div class="buttonsContainer">
-					<a href="#all" class="button active"> <p>ALL</p></a>
-					<a href="#ui_design" class="button"> <p> UI DESIGN </p></a>
-					<a href="#android_page" class="button"> <p> ANDROID PAGE </p></a>
+					<a href="#!" data-filter="all" class="button active"> <p>ALL</p></a>
+					<a href="#!" data-filter="ui" class="button"> <p> UI DESIGN </p></a>
+					<a href="#!" data-filter="android" class="button"> <p> ANDROID PAGE </p></a>
 				</div>
 			</section>
 			<br>
 			<section class="portfolioImages" >
 				<!-- PORTFOLIO IMAGE 1 -->
-			    	<article class="singleImage">
+			    	<article class="singleImage" data-filter="ui">
 						<figure> 
 							<img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
 							<figcaption>
