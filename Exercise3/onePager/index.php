@@ -10,6 +10,7 @@
     <script src="<?php bloginfo('template_url'); ?>/jquery-2.2.2.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/main.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/transitions.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/filter.js"></script>
     
     <?php wp_head(); ?>
   </head>
@@ -143,15 +144,15 @@
         
 			<section class="buttonsLink">
 				<div class="buttonsContainer">
-					<a href="#!" data-filter="all" class="button active"> <p>ALL</p></a>
-					<a href="#!" data-filter="ui" class="button"> <p> UI DESIGN </p></a>
-					<a href="#!" data-filter="android" class="button"> <p> ANDROID PAGE </p></a>
+					<a href="#!" class="button active" id="buttonALL" onClick="ButtonAll()"> <p>ALL</p></a>
+					<a href="#!" class="button" id="buttonUI" onClick="ButtonUi()"> <p> UI DESIGN </p></a>
+					<a href="#!" class="button" id="buttonANDROID" onClick="ButtonAndroid()"> <p> ANDROID PAGE </p></a>
 				</div>
 			</section>
 			<br>
 			<section class="portfolioImages" >
 				<!-- PORTFOLIO IMAGE 1 -->
-			    	<article class="singleImage" data-filter="ui">
+			    	<article class="singleImage Ui" >
 						<figure> 
 							<img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
 							<figcaption>
@@ -171,7 +172,7 @@
 			    	</article>
 			    	
 				<!-- PORTFOLIO IMAGE 2 -->
-			    	<article class="singleImage">
+			    	<article class="singleImage Ui">
 						<figure>
 							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio02.jpg" alt="">
 							<figcaption>
@@ -190,7 +191,7 @@
 						</figure>
                 </article>
 				<!-- PORTFOLIO IMAGE 3 -->
-			    	<article class="singleImage">
+			    	<article class="singleImage Android">
 						<figure>
 							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
 							<figcaption>
@@ -199,7 +200,7 @@
 								<div id="myModal3" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>ANDROID DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -209,7 +210,7 @@
 						</figure>
 			    	</article>
 				<!-- PORTFOLIO IMAGE 3 -->
-				<article class="singleImage">
+				<article class="singleImage Android">
 					<figure>
 						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
 						<figcaption>
@@ -218,7 +219,7 @@
 							<div id="myModal4" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>Android DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -228,7 +229,7 @@
 					</figure>
 				</article>
 				<!-- PORTFOLIO IMAGE 3 -->
-				<article class="singleImage" >
+				<article class="singleImage Android" >
 					<figure>
 						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
 						<figcaption>
@@ -237,7 +238,7 @@
 							<div id="myModal5" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>ANADROID DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -247,7 +248,7 @@
 					</figure>
 				</article>
 			<!-- PORTFOLIO IMAGE 3 -->
-			<article class="singleImage six">
+			<article class="singleImage six Android">
 				<figure>
 					<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
 					<figcaption>
@@ -256,7 +257,7 @@
 						<div id="myModal6" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>Android DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
