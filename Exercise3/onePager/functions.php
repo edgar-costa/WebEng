@@ -89,7 +89,5 @@ function build_skill_options_page(){
 
 
 
-
-
  ?>
 
