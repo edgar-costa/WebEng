@@ -1,0 +1,619 @@
+/*
+****************************
+	Total scope
+ ****************************
+  */
+
+*{
+	
+	line-height: 200%;
+	/* font-family: 'Lato', sans-serif; */
+	font-family: 'Raleway', sans-serif;
+
+}
+
+
+ br{
+	display:none;
+}
+
+p{
+    font-size: 1.4em;
+}
+
+hr{
+	width:100%;
+}
+
+
+
+ #blog hr{
+ 	width:80%;
+ }
+
+	
+.sectionTitle{
+
+	text-align: center;
+	font-size: 30px;
+	font-weight:200;
+	padding-top: 30px;
+	
+
+}
+
+h1{
+	font-size: 2.8em;
+}
+
+
+/*
+****************************
+ Navigation
+ ****************************
+  */
+nav{
+		
+	position: fixed;
+	width:100%;
+	background: #2B2B2B;
+	padding: 10px 0px 10px 0;
+	 z-index: 1;
+
+	
+}
+nav ul{
+	display: flex;
+	flex-direction: row; 
+	justify-content:  center ;
+
+
+}
+nav ul li{
+	text-align: center;
+	font-size: 1.3em;
+	opacity: 0.8;
+}
+
+
+
+/*
+****************************
+ Header
+ ****************************
+  */
+
+
+
+.main_header p{
+	 
+	font-size: 4.0em;
+}
+
+.main_header p:first-of-type{
+	margin-top: 40vh;
+	}
+
+
+
+
+#about{
+	padding-bottom:50px;
+}
+
+#about h1{
+	font-size:2.4em;
+}
+
+
+	/*
+****************************
+ Designer + Coder + Skills
+ ****************************
+  */
+
+ /*  Part Designer Section
+ */
+.partDesigner{
+
+	height:50vh;
+	margin-bottom: 0;
+	border-top: white 1px solid;
+
+}
+
+.partDesigner h1{
+	font-size:2.4em;
+}
+
+
+.partDesigner p{
+	font-size: 1.5em;	
+	width:100%;
+}
+
+/*  Part Coder Section
+ */
+	.partCoder{
+	padding: 0 8%;
+	border-top: black solid 1px;
+	padding-bottom: 50px;
+	height:50vh;
+	line-height: 200%;
+}
+
+.partCoder p{
+	font-size:1.4em;
+}
+
+.partCoder h1{
+	font-size:2.4em;
+}
+
+
+/*  Part Skills
+ */
+
+
+
+.skills{
+	
+	border: white 1px solid;
+	padding-bottom: 50px; 
+}
+
+.skills h1{
+	font-size:2.4em;
+}
+
+
+
+
+ #html_skill{
+ 	position:absolute;
+ 	width:95%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #69B7AE; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right,#A7D6D1, #69B7AE ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,#A7D6D1, #69B7AE ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,#A7D6D1, #69B7AE ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left,#A7D6D1, #69B7AE ); /* Standard syntax */
+ }
+
+
+  #css_skill{
+  	position:absolute;
+ 	width:80%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #E2B0A0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #F3D9D2, #E2B0A0 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #F3D9D2, #E2B0A0 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,#F3D9D2, #E2B0A0 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #F3D9D2, #E2B0A0 ); /* Standard syntax */
+ }
+
+
+/* 
+ #E2B340
+#ECC15A
+  */
+  #js_skill{
+  	position:absolute;
+ 	width:90%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #E2B340; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #ECC15A, #E2B340 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #ECC15A, #E2B340 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #ECC15A, #E2B340 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #ECC15A, #E2B340 ); /* Standard syntax */
+ }
+ 
+
+/* #C49965
+/* #C49965
+#DAB780 */
+  #wp_skill{
+  	position:absolute;
+ 	width:80%;
+ 	bottom:0;
+ 	height: 100%;
+ 	background: #C49965; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #DAB780, #C49965 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #DAB780, #C49965 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #DAB780, #C49965 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #DAB780, #C49965 ); /* Standard syntax */
+ 	
+ }
+
+
+ .skill_sqr{
+	
+	
+	width:100%;
+ 	margin: 1% 0;
+ 	height: 100px;
+ 	position:relative;
+	
+
+ }
+
+  .skill_name{
+	display: inline-block;
+  	width:fit-content;
+  	padding:0;
+  	font-size: 1.7em;
+  	left:5%;
+  	top:35px;
+  	margin:0;
+}
+
+ .skill_percentage{
+
+	left:60%;
+	top:20%;
+ 	width:fit-content;
+	padding:0;
+	font-size:3.0em;
+	margin:0;
+	opacity: 0.5;
+	
+
+ }
+
+/*PORTFOLIO*/
+/*===========================*/
+#portfolio br{
+	display:none;
+}
+
+#portfolio
+ h1{
+	font-size:2.4em;
+}
+
+
+#portfolio hr{
+	width:80%;
+}
+
+
+#portfolio{
+		border: white 1px solid;
+
+}
+
+
+.buttonsContainer {
+	
+   
+    width: 95%;
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+
+
+.button{
+    width: 30%;
+    margin:2px;
+    height:30px;
+    flex:1;
+}
+
+
+
+.button p{
+    font-size: 1.3em;
+    opacity: 1;
+}
+
+
+
+/*IMAGES*/
+/*================================*/
+
+.portfolioImages {
+    flex-direction: column;
+
+}
+
+.portfolioImages{
+	width:100%;
+}
+
+
+
+.singleImage{
+    align-self: center;
+   	margin:0 0 0 0 ;
+   	width: 100%;
+
+}
+
+.singleImage figure{
+	width:100%;
+	margin:0;
+
+}
+
+.singleImage figure img{
+	width:100%;
+}
+/* Hide 1 and 4 singleImage*/
+.singleImage:nth-child(1){
+	display:none;
+}
+.singleImage:nth-child(4){
+	display:none;
+}
+
+
+.singleImage figcaption{
+	text-align: center;
+	padding:0px;
+    position: relative;
+    margin-top: -30px;
+    justify-content: center;
+
+}
+
+
+
+.singleImage h5 {
+	text-align: center;
+	flex:1;
+	 font-size:1.3em;
+
+    
+}
+
+.singleImage a {
+	display:flex;
+	align-items:center;
+	justify-items: center;
+	justify-content: center;
+	flex:1;
+    margin:0;
+    text-transform: uppercase;
+    font-size:1.3em;
+}
+
+
+
+
+
+/*
+****************************
+ Blog
+ ****************************
+  */
+
+
+
+#blog {
+		
+
+ background-color: #f5f5f5;	
+ padding:0;
+ 
+}
+
+#blog h1{
+	font-size:2.4em;
+}
+
+#blog br{
+	display:none;
+}
+
+
+#blog div:first-of-type br{
+	display:none;
+}
+/*The parent class instructs that the following divs will be displayed with flex */
+#parent {
+
+	flex-direction: column; 
+}
+
+/*The first and second columns will take 40 percent of the page width each. The last column takes only the 20% remaining.*/
+#first {
+	
+
+	display: block;/*Here we instruct that inner objects will be using flex too*/
+	} 
+
+#second {
+
+	display:block;}
+	
+/*This is box where the image of the blogger is placed*/
+.writer {
+	padding:10px;
+}
+
+.writer h4{
+	margin:0;
+}
+.writer h5{
+
+margin:0;
+}
+
+.writer img{
+	margin-top:10px;
+	height: 40px;
+	width:40px;
+}
+
+.writer br{
+	display:none;
+}
+/* This applies to the introductory text of the blog entry*/
+.intro{
+	flex: 3;
+	padding: 20px;
+
+}	
+
+/*This one is the third column, with the least recent blog entries (only the title is shown)*/
+#others {
+    display: flex;
+    padding:0;
+    width:100%;
+	}
+
+.others-list {
+	
+	width:100%;
+  	display:flex;
+   	flex-direction: row;
+   	padding:0;
+   /* 	border:red solid 3px; */
+   	
+}
+
+
+
+.others-box {
+	padding:10px;
+	list-style-type: none;
+    color: white;
+    margin:2px;
+	background-color: #2B2B2B;
+/*     height: inherit;
+ */    flex:1;
+}
+
+.others-list p{
+     font-size:1.2em;
+
+}
+
+
+
+.others-box a{
+	color:#1A8AE0;
+	font-size:1em;
+
+}
+
+.blog-date {
+	font-weight: normal;
+	font-size:1.0em;
+
+}
+
+
+
+/*
+****************************
+ Crafted in Zurich
+ ****************************
+  */
+
+
+
+.craftedinZurich{
+	margin-top: 10px;
+	width:100%;
+	height:500px;
+}
+
+.craftedinZurich h1{
+	font-size: 2.4em;
+}
+
+.craftedinZurich p{
+	font-size: 2.0em;
+}
+
+/*
+****************************
+ Contact
+ ****************************
+  */
+
+
+.contact h1{
+	font-size:2.4em;
+}
+
+.contact .column-left br{
+	display:inline-block;
+}
+
+
+
+
+.columns {
+    flex-direction: column;
+}
+
+
+.column-left{
+	margin:0, auto;
+}
+
+
+.column-left {
+	flex:100;
+	margin:0 auto;
+	text-align: center;
+}
+
+.column-left h3{
+	font-size:1.8em;
+}
+
+.column-left p{
+	font-size:1.5em;
+}
+
+.column-center 	{
+	display:none;
+}
+
+.column-right{
+	display:none;
+}
+
+.column-center br{
+	display:inline-block;
+}
+
+
+
+
+
+/*
+****************************
+ Page Footer
+ ****************************
+  */
+
+  .pg_footer{
+  	padding: 40px;
+  	height: 40px;
+  
+  }
+
+  .pg_footer h4{
+  	color:white;
+  	font-weight:200;
+  	font-size: 1.5em;
+  }
+
+  .pg_footer a{
+  	color:#1A8AE0;
+	opacity: 1;
+  	font-weight: 400;
+  	text-decoration: none;
+  }
+
+
+
