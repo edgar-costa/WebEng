@@ -152,24 +152,44 @@
 			<br>
 			<section class="portfolioImages" >
 				<!-- PORTFOLIO IMAGE 1 -->
-			    	<article class="singleImage Ui" >
-						<figure> 
-							<img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
-							<figcaption>
-								<h5>UI DESIGN</h5>
-                                <a class="takeLook" data-toggle="modal" href="#myModal1" >Take a Look</a>
-						    	<div id="myModal1" class="modalDialog">
-									<div>
-									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
-									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
-									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
-									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-									</div>
-								</div>								
-							</figcaption>
-						</figure>
-			    	</article>
+			    	<!-- PORTFOLIO IMAGE 1 -->
+				<?php $porfolioItemsQuery = new WP_Query(array('post_type'=>'portfolio_item'));
+				while ( $porfolioItemsQuery->have_posts() ):
+					$porfolioItemsQuery->the_post();  ?>
+					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); 
+							$url = $thumb['0'];
+						$portfolio_item_type =get_the_terms(get_the_id(), "portfolio_item_type");
+							$type = $portfolio_item_type[0]->name;
+							?>  
+				    	<article class="singleImage <?php if (strcmp($type,"Android Page" )==0) {
+				    		echo "Android";
+				    	}elseif (strcmp($type,"GUI" )==0) {
+				    		echo "Ui";
+				    	}?>" >
+							<figure> 
+						 
+								<img src="<?php echo $url ?>" alt="">
+								<figcaption>
+									<h5><?php 
+											
+												echo strtoupper($type);
+									 ?></h5>
+
+	                                <a class="takeLook" data-toggle="modal" href="#myModal<?php echo the_id() ?>" >Take a Look</a>
+							    	<div id="myModal<?php echo the_id() ?>" class="modalDialog">
+										<div>
+										<a href="#close" title="Close" class="close">X</a>
+										<h2><?php 	echo strtoupper($type);
+									 ?></h2>
+										 
+										<img  src="<?php echo $url ?>" alt="">
+										<p><?php the_content(); ?></p>
+										</div>
+									</div>								
+								</figcaption>
+							</figure>
+				    	</article>
+			    <?php endwhile; ?>
 			    	
 				<!-- PORTFOLIO IMAGE 2 -->
 			    	<article class="singleImage Ui">
