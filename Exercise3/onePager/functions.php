@@ -211,7 +211,7 @@ function my_custom_post_portfolio_item() {
     'description'   => 'Holds all works that go into the portfolio section',
     'public'        => true,
     'menu_position' => 5,
-    'supports'      => array( 'title', 'editor', 'thumbnail'),
+    'supports'      => array( 'editor', 'thumbnail'),
     'has_archive'   => true,
   );
   register_post_type( 'portfolio_item', $args ); 
