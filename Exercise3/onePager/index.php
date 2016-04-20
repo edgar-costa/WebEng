@@ -400,17 +400,16 @@
          </header>
          
         <section class="columns">
-            <article class="column-left slideInBottom">
+          <article class="column-left slideInBottom">
 					<h3>Contact Information</h3>
-					<p> <span></span> Paradeplatz, Zurich<br>
-				        <span></span> +0041 9884 4893<br>
-						<span></span> +0041 9884 8893<br>
-						<span></span> <a href="#"> mrdesignrobot@inf.co</a> <br>
-						<span></span> <a href="#"> @mrdesignrobot </a> <br>
-						<span></span> <a href="#"> Mr Design Luigi</a> <br>
+					<p> <span></span> <?php  echo get_option("Address") ?><br>
+				        <span></span> <?php  echo get_option("PhoneNumber1") ?><br>
+						<span></span> <?php  echo get_option("PhoneNumber2") ?><br>
+						<span></span> <a href="#!"> <?php  echo get_option("EmailAddress") ?></a> <br>
+						<span></span> <a href="#!"> <?php  echo get_option("Twitter") ?> </a> <br>
+						<span></span> <a href="#!"> <?php  echo get_option("Name") ?></a> <br>
 					</p>
             </article>
-		  	
 	
             <article class="column-center slideInBottom">
 					<h3>Newsletter</h3>
