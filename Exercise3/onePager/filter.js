@@ -10,6 +10,14 @@ function ButtonAll(){
    for ( i =0; i < all.length; i++){
 	all[i].style.display = "flex";
 }
+   //set buttons colors
+   var button = document.getElementById('buttonALL');
+   button.style.backgroundColor="#32cd32";
+   var button = document.getElementById('buttonUI');
+   button.style.backgroundColor="#808080";
+   var button = document.getElementById('buttonANDROID');
+   button.style.backgroundColor="#808080";
+
 
 
 }
@@ -28,6 +36,14 @@ function ButtonUi(){
   for ( i =0; i < android.length; i++){
 	android[i].style.display = "none";
 }
+
+   //set buttons colors
+   var button = document.getElementById('buttonALL');
+   button.style.backgroundColor="#808080"
+   var button = document.getElementById('buttonUI');
+   button.style.backgroundColor="#32cd32";
+   var button = document.getElementById('buttonANDROID');
+   button.style.backgroundColor="#808080";
 
 }
 
@@ -48,5 +64,13 @@ function ButtonAndroid(){
   for ( i =0; i < android.length; i++){
 	android[i].style.display = "flex";
 }
+
+   //set buttons colors
+   var button = document.getElementById('buttonALL');
+   button.style.backgroundColor="#808080";
+   var button = document.getElementById('buttonUI');
+   button.style.backgroundColor="#808080";
+   var button = document.getElementById('buttonANDROID');
+   button.style.backgroundColor="#32cd32";
 
 }

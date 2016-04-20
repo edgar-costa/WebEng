@@ -240,7 +240,55 @@ $args = array(
 );
 add_theme_support( 'custom-background', $args );
 
+
+
+
+
+add_action('wp_ajax_wordpress_query_blog', 'wordpress_query_blog_callback');
+add_action('wp_ajax_nopriv_wordpress_query_blog', 'wordpress_query_blog_callback');
+
+
+function wordpress_query_blog_callback(){
+
+	$myfile = fopen("/home/edgar/phptest","w");
+	$txt = "ieeee\n";
+	fwrite($myfile,$txt);
+	fclose($myfile);
+	
+	$query = new WP_Query(array('p' => $_POST['id']));
+	
+
+	//ESTO NO SE COMO PONERLO PARA QUE LO DEVUELVA
+	/*$html = <<<HTML
+	<article id="first" class="slideInLeft">
+	<?php if ( have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+			<div class="writer">
+			<br>
+			<p><img  src="<?php bloginfo('template_url'); ?>/assets/img/team/u1.jpg" width="60px" height="60px"></p>
+	  			<h4><?php the_author(); ?></h4>
+				<h5 class="blog-date">Published <?php the_time('F j,Y'); ?>.</h5>
+				</div>
+				<div class="intro">
+					<h2><?php the_title(); ?></h2>
+					<p>
+ 						<?php the_content(); ?>
+					<p>
+					<p><a href="#!" onClick="getSingleBlog(<?php the_id(); ?>)"> Read More</a></p>
+					<br>
+				</div>
+			<?php endwhile; else: ?>
+       			 <?php endif; ?>
+			</article>
+	HTML;	*/
+
+	
+
+}
+
  ?>
+
+
+
 
 
 
