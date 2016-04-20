@@ -10,11 +10,12 @@
     <script src="<?php bloginfo('template_url'); ?>/jquery-2.2.2.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/main.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/transitions.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/filter.js"></script>
     
     <?php wp_head(); ?>
   </head>
 
-  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  <body data-spy="scroll" data-offset="0" data-target="#navbar-main" style="background-color: #<?php background_color(); ?>">
 	<!-- ==== MENU ==== -->
 	<nav>
 		<ul>
@@ -43,7 +44,7 @@
       
   	<!-- ==== /MENU ==== -->
 	<!-- ==== HEADER ==== -->
-    <section class="web">
+    <section class="web" >
 	<section id="home">
 		<header class="main_header">
 	  		<h1><span ></span></h1>
@@ -63,7 +64,7 @@
         
 	<!-- ==== ABOUT ==== -->
     <section>
-	<section class ="sectionPadding slideInLeft link" id="about">
+	<section class ="sectionPadding slideInLeft link" id="about" >
 		<article>
 			<?php
 				$aboutPageQuery = new WP_Query('pagename=about');
@@ -124,10 +125,10 @@
             <header>
 			<h1 class="sectionTitle"> My Technical Skills</h1>
             </header>
-			<div class="skill_sqr" > <div id="html_skill" ><div class="skill_percentage">95<span>%</span></div> <div class="skill_name">HTML</div></div></div>
-			<div class="skill_sqr" >  <div id="css_skill" ><div class="skill_percentage">80<span>%</span></div> <div class="skill_name" >CSS</div></div></div>
-			<div class="skill_sqr"  > <div id="js_skill" ><div class="skill_percentage">90<span>%</span></div> <div class="skill_name">JavaScript</div> </div></div>
-			<div class="skill_sqr" > <div  id="wp_skill"> <div class="skill_percentage">80<span>%</span></div> <div class="skill_name">WordPress</div> </div></div>
+			<div class="skill_sqr" > <div id="html_skill" style="height:<?php  echo get_option("html_skill") ?>%;"><div class="skill_percentage"><?php  echo strval(get_option("html_skill")) ?><span>%</span></div> <div class="skill_name">HTML</div></div></div>
+			<div class="skill_sqr" >  <div id="css_skill"style="height:<?php  echo get_option("css_skill") ?>%;" ><div class="skill_percentage"><?php  echo strval(get_option("css_skill")) ?><span>%</span></div> <div class="skill_name" >CSS</div></div></div>
+			<div class="skill_sqr"  > <div id="js_skill"style="height:<?php  echo get_option("js_skill") ?>%;" ><div class="skill_percentage"><?php  echo strval(get_option("js_skill")) ?><span>%</span></div> <div class="skill_name">JavaScript</div> </div></div>
+			<div class="skill_sqr" > <div  id="wp_skill"style="height:<?php  echo get_option("wp_skill") ?>%;"> <div class="skill_percentage"><?php  echo strval(get_option("wp_skill")) ?><span>%</span></div> <div class="skill_name">WordPress</div> </div></div>
 	</section>
     </section>
 		
@@ -143,15 +144,15 @@
         
 			<section class="buttonsLink">
 				<div class="buttonsContainer">
-					<a href="#!" data-filter="all" class="button active"> <p>ALL</p></a>
-					<a href="#!" data-filter="ui" class="button"> <p> UI DESIGN </p></a>
-					<a href="#!" data-filter="android" class="button"> <p> ANDROID PAGE </p></a>
+					<a href="#!" class="button active" id="buttonALL" onClick="ButtonAll()"> <p>ALL</p></a>
+					<a href="#!" class="button" id="buttonUI" onClick="ButtonUi()"> <p> UI DESIGN </p></a>
+					<a href="#!" class="button" id="buttonANDROID" onClick="ButtonAndroid()"> <p> ANDROID PAGE </p></a>
 				</div>
 			</section>
 			<br>
 			<section class="portfolioImages" >
 				<!-- PORTFOLIO IMAGE 1 -->
-			    	<article class="singleImage" data-filter="ui">
+			    	<article class="singleImage Ui" >
 						<figure> 
 							<img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio01.jpg" alt="">
 							<figcaption>
@@ -171,7 +172,7 @@
 			    	</article>
 			    	
 				<!-- PORTFOLIO IMAGE 2 -->
-			    	<article class="singleImage">
+			    	<article class="singleImage Ui">
 						<figure>
 							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio02.jpg" alt="">
 							<figcaption>
@@ -190,7 +191,7 @@
 						</figure>
                 </article>
 				<!-- PORTFOLIO IMAGE 3 -->
-			    	<article class="singleImage">
+			    	<article class="singleImage Android">
 						<figure>
 							<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
 							<figcaption>
@@ -199,7 +200,7 @@
 								<div id="myModal3" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>ANDROID DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio03.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -209,7 +210,7 @@
 						</figure>
 			    	</article>
 				<!-- PORTFOLIO IMAGE 3 -->
-				<article class="singleImage">
+				<article class="singleImage Android">
 					<figure>
 						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
 						<figcaption>
@@ -218,7 +219,7 @@
 							<div id="myModal4" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>Android DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio04.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -228,7 +229,7 @@
 					</figure>
 				</article>
 				<!-- PORTFOLIO IMAGE 3 -->
-				<article class="singleImage" >
+				<article class="singleImage Android" >
 					<figure>
 						<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
 						<figcaption>
@@ -237,7 +238,7 @@
 							<div id="myModal5" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>ANADROID DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio05.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -247,7 +248,7 @@
 					</figure>
 				</article>
 			<!-- PORTFOLIO IMAGE 3 -->
-			<article class="singleImage six">
+			<article class="singleImage six Android">
 				<figure>
 					<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
 					<figcaption>
@@ -256,7 +257,7 @@
 						<div id="myModal6" class="modalDialog">
 									<div>
 									<a href="#close" title="Close" class="close">X</a>
-									<h2>UI DESIGN</h2>
+									<h2>Android DESIGN</h2>
 									<img  src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/folio06.jpg" alt="">
 									<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 									<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
@@ -399,17 +400,16 @@
          </header>
          
         <section class="columns">
-            <article class="column-left slideInBottom">
+          <article class="column-left slideInBottom">
 					<h3>Contact Information</h3>
-					<p> <span></span> Paradeplatz, Zurich<br>
-				        <span></span> +0041 9884 4893<br>
-						<span></span> +0041 9884 8893<br>
-						<span></span> <a href="#"> mrdesignrobot@inf.co</a> <br>
-						<span></span> <a href="#"> @mrdesignrobot </a> <br>
-						<span></span> <a href="#"> Mr Design Luigi</a> <br>
+					<p> <span></span> <?php  echo get_option("Address") ?><br>
+				        <span></span> <?php  echo get_option("PhoneNumber1") ?><br>
+						<span></span> <?php  echo get_option("PhoneNumber2") ?><br>
+						<span></span> <a href="#!"> <?php  echo get_option("EmailAddress") ?></a> <br>
+						<span></span> <a href="#!"> <?php  echo get_option("Twitter") ?> </a> <br>
+						<span></span> <a href="#!"> <?php  echo get_option("Name") ?></a> <br>
 					</p>
             </article>
-		  	
 	
             <article class="column-center slideInBottom">
 					<h3>Newsletter</h3>

@@ -15,7 +15,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  <body data-spy="scroll" data-offset="0" data-target="#navbar-main" style="background-color: #<?php background_color(); ?>">
 	<!-- ==== MENU ==== -->
 	<nav>
 		<ul>
@@ -44,7 +44,7 @@
       
   	<!-- ==== /MENU ==== -->
 	<!-- ==== HEADER ==== -->
-    <section class="web">
+    <section class="web" >
 	<section id="home">
 		<header class="main_header">
 	  		<h1><span ></span></h1>
@@ -64,7 +64,7 @@
         
 	<!-- ==== ABOUT ==== -->
     <section>
-	<section class ="sectionPadding slideInLeft link" id="about">
+	<section class ="sectionPadding slideInLeft link" id="about" >
 		<article>
 			<?php
 				$aboutPageQuery = new WP_Query('pagename=about');

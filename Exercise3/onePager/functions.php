@@ -234,5 +234,15 @@ function build_taxonomies(){
 
 add_action( 'init', 'build_taxonomies', 0 );
 
+
+$args = array(
+	'default-color' => 'ffffff',
+);
+add_theme_support( 'custom-background', $args );
+
  ?>
+
+
+
+
 
