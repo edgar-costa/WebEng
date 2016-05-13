@@ -82,22 +82,34 @@ hr{
 ****************************
  Navigation
  ****************************
-  */
+*/
 nav{
 	position: fixed;
 	width:100%;
 	background: #2B2B2B;
-	padding: 20px 0px;
+	padding: 0px 0px 5px;
     z-index: 1;
 }
 nav ul{
 	padding: 0 15px;
 }
+
 nav ul li{
-    display: inline-block;
-	margin-right: 25px;
+	display: inline-block;
 	font-size: 1.8em;
+    width: 5%;
+    padding: 10px;
 	opacity: 0.8;
+    align-content: center;
+}
+
+.iconname {
+    text-align: center;
+}
+
+
+.iconn a img {
+    display: flex;
 }
 
 nav a{
@@ -106,6 +118,19 @@ nav a{
 	text-decoration: none;
 }
 
+/*Correct hrefs*/
+
+
+
+.link{
+    padding-top:125px;
+    margin-top: -125px;
+}
+
+.link2{
+    padding-top:60px;
+    margin-top: -60px;
+}
 /*
 ****************************
  Header
@@ -136,6 +161,10 @@ nav a{
 	margin-top: 40vh;
 }
 
+
+#about article{
+  padding-bottom: 5%;
+}
 
 	/*
 ****************************
@@ -313,6 +342,10 @@ nav a{
 /*PORTFOLIO*/
 /*===========================*/
 
+#portfolio{
+    margin-bottom: 60px;
+}
+
 .buttonsContainer {
     display: flex;
     flex-direction: row;
@@ -327,11 +360,11 @@ nav a{
     margin: 0 auto;
     background-color: #808080;
     color: white;
-    padding: 5px
+    padding: 5px;
 }
 
 .button p{
-    font-size: 1.6em;
+    font-size:1.6em;
     opacity: 1;
 }
 
@@ -343,7 +376,9 @@ nav a{
 /*IMAGES*/
 /*================================*/
 
+
 .portfolioImages {
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -351,48 +386,89 @@ nav a{
 }
 
 .portfolioImages img{
-    
-    display: flex;
-    flex-direction: row;
-    width: 94%;
 
+    display: flex;
+    width: 100%;
+    height:100%;
 }   
 
 .singleImage{
-    
     display: flex;  
     width: 23%;
-    margin : 1em;
+    margin:1em;
     align-self: flex-end;
 }
 
+.singleImage figure{
+	position:relative;
+	height:100%;
+	widows: 100%;
+	}
+
 .singleImage figcaption{
-    position: relative;
-    margin-top: -30px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:30%;
     display: flex;
     flex-direction: row;
     background-color: #3498db;
-    padding: 8px;
     font-size: 0.9em;
     justify-content: space-around;
+    align-items: center;
+    transition: all 1s ease;	
 }
+
+
+.singleImage:hover figcaption{
+
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top,rgba(52,152,219,0),rgba(255,100,100,1)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(bottom,rgba(52,152,219,0),rgba(255,100,100,1)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(bottom,rgba(52,152,219,0),rgba(255,100,100,1)); /*Fx 3.6-15*/
+	background: linear-gradient(to bottom, rgba(52,152,219,0), rgba(255,100,100,1)); /*Standard*/
+	flex-direction: column;
+	position:absolute;
+	width:100%;
+	height:100%;
+
+}
+
+
 
 .singleImage h5 {
     font-size: 1.6em;;
     font-weight: bold;
     color: white;
-    background-color: #3498db;
     padding: 8px;
-
-    
+    transition: all 1s ease;
 }
 
-.singleImage a {
+.singleImage:hover h5{
+	display:flex;
+	align-self: center;
+	margin-top: 20%;
+}
+
+
+
+.singleImage a.takeLook{
     font-size: 1.6em;
     color: white;
     background-color: #2f2f2f;
     padding: 5px;
-    
+    transition: all 0.0s ease;	
+	
+
+}
+
+.singleImage:hover a.takeLook{
+	width:80%;
+	text-align: center;
+	transform:rotateY(360deg);
+	margin-bottom: 2%;
+	transition: all 2.0s ease;	
 }
 
 
@@ -406,7 +482,7 @@ nav a{
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.75);
 	z-index: 99999;
 	opacity:0;
 	-webkit-transition: opacity 400ms ease-in;
@@ -420,14 +496,17 @@ nav a{
 	pointer-events: auto;
 }
 
-.modalDialog .close{
+.modalDialog a.close{
+    display:inline-block;
 	position: absolute;
 	top: 4%;
-   right: 6%;
+    right: 6%;
+    padding: 4px;
+    z-index: 1;
    
 }
 .singleImage a.close{
- 	font-size: 1.7em;
+   font-size: 1.7em;
    color: #2f2f2f;
    background-color: rgba(234, 226,226, 0);
    font-weight: bold;
@@ -453,7 +532,7 @@ font-size: 1.8em;
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
-	background: #EAE2E2;
+	background: #ffffff;
 	#background: -moz-linear-gradient(#fff, #999);
 	#background: -webkit-linear-gradient(#fff, #999);
 	#background: -o-linear-gradient(#fff, #999);
@@ -652,6 +731,56 @@ font-size: 1.8em;
 
 
 
+/*
+****************************
+ Animations
+ ****************************
+  */
+
+
+.slideInLeft{
+	  opacity: 1;
+  -moz-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  -moz-transform: translate3d(-100%, 0px, 0px);
+  -webkit-transform: translate3d(-100%, 0px, 0px);
+  -o-transform: translate(-100%, 0px);
+  -ms-transform: translate(-100%, 0px);
+  transform: translate3d(-100%, 0px, 0px);
+}
+
+.slideInLeft.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.slideInBottom{
+	  opacity: 1;
+  -moz-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200px, 0px);
+}
+
+.slideInBottom.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
 
 
 

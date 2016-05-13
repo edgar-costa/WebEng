@@ -1,0 +1,21 @@
+<?php 
+
+
+		function addSections()
+			{
+			    include './'
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ?>
