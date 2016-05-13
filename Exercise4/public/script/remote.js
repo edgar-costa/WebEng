@@ -1,5 +1,6 @@
 var currentImage = 0; // the currently selected image
 var imageCount = 7; // the maximum number of images available
+
 var socket = NaN;
 
 function showImage (index){

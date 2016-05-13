@@ -8,8 +8,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var text = document.querySelector('#name');
         text.textContent = devicename;
     }
-    connectToServer(devicename);
+    //connectToServer(devicename);
+    socket = io.connect('', {query: {type: "Screen", name: devicename}});       
+
+    //Deal with new index event
+    socket.on("message", function(data){
+	showImage(data);
+    });
 });
+
 
 // Gets an image index and modifies the screen.html accordingly to show the image
 function showImage (index){
@@ -44,8 +51,6 @@ function getQueryParams() {
 
 function connectToServer(devicename){
     //Connect to the socket.io server
-    var socket = io.connect('', {query: {type: "Screen", name: devicename}});
-    
-    //Deal with new index event
-    socket.on("image index", showImage(index))
+    socket = io.connect('', {query: {type: "Screen", name: devicename}});
 }
+

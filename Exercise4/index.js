@@ -1,20 +1,27 @@
+// Create the express object
 var express = require('express');
-var app = express();
-var http = require('http').Server(app);
 
-//Create array that will hold the connected screens
-var connectedScreens = new Array();
+// App is a function handler that is supplied to the HTTP server
+var app = express();
+
+// Create the web server
+var http = require('http').Server(app);
 
 // Initialize instance of socket.io by passing the http object.
 var io = require('socket.io')(http);
 
-//Serves the files under the public folder
+// Serves the files under the public folder only
 app.use(express.static('public'));
 
 //Listens on port 8080
 http.listen(8080, function(){
     console.log('listening on *:8080');
 });
+
+
+
+//Create array that will hold the connected screens
+//var connectedScreens = new Array();
 
 //Then I listen on the connection event for incoming sockets, and I log it to the console.
 io.on('connection', function(socket){
@@ -32,8 +39,8 @@ io.on('connection', function(socket){
         console.log("\tScreen name: " + screenName);
     }
     
-    socket.on("image index", function(index){
-        console.log("New image index clicked: "+index);
-        //socket.emit('show new image', index);
+    socket.on('image index', function(data){
+        console.log("New image index clicked: "+ data);
+        socket.broadcast.emit('message', data);
     })
 });
