@@ -8,12 +8,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var text = document.querySelector('#name');
         text.textContent = devicename;
     }
-    //connectToServer(devicename);
+    //ConnectToServer(devicename);
     socket = io.connect('', {query: {type: "Screen", name: devicename}});       
 
     //Deal with new index event
     socket.on("message", function(data){
-	showImage(data);
+	//Parse data to search which index image should this screen display
+	for (i = 0; i < data.length; i++){
+	    if (data[i].name == devicename){
+		showImage(data[i].index);
+	    }
+	}
     });
 });
 
