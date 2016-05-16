@@ -7,7 +7,10 @@ var socket = NaN;
 var screens = new Array();
 
 
-function trackScreen(screenName){
+function trackScreen(onClickEvent){
+    //Get the screenName
+    var screenName = onClickEvent || window.event;
+
     // === Remove the default text first =============
     //Check if other screens are present
     if (screens.length == 0){
@@ -38,24 +41,29 @@ function trackScreen(screenName){
     var element = document.createElement('input');
     element.type='button';
     element.value = "Connect!";
-    element.onclick = function(screenName){connectToScreen(screenName);};
+
+    //Set the right onclick call
+    element.onclick = function(onClickEvent){connectToScreen(onClickEvent); return false;};
+
     entry.appendChild(element);
     
     //Append new entry to menu
     menuList.appendChild(entry);
-
 }
 
-function untrackScreen(screenName){
+function untrackScreen(onClickEvent){
+    //Get the screenName
+    var screenName = onClickEvent || window.event;
+
     //Remove screen from variable here
     var screen_index = NaN;
-    for (i=0; i<screens.length; i++){
+    for (var i = 0; i < screens.length; i++){
 	if (screens[i].name == screenName){
 	    screen_index = i;
 	    break;
 	}
     }
-    screen_to_remove = screens[screen_index];
+    var screen_to_remove = screens[screen_index];
     screens.splice(screen_index, 1)
     //alert("Screens left: "+screens.length);
 
@@ -80,11 +88,14 @@ function untrackScreen(screenName){
     }
 }
 
-function connectToScreen(screenName){
+function connectToScreen(onClickEvent){
+    //Get screenname
+    var screenName = onClickEvent.target.parentElement.id;
+
     // === Change attribute first ==============
     //Search for index
     var screen_index = NaN;
-    for (i=0; i<screens.length; i++){
+    for (var i=0; i < screens.length; i++){
 	if (screens[i].name == screenName){
 	    screen_index = i;    
 	    break;
@@ -93,16 +104,49 @@ function connectToScreen(screenName){
     //Change connected attribute to true
     screens[screen_index].connected = true;
 
-    // === Send event to screen so that it knows to which remote is connected
-    socket.broadcast.emit('screenConnectedToRemote');
+    //Change button state!
+    var button = document.getElementById(screenName);
+    button = button.childNodes[2];
+    button.setAttribute('value',  'Disconnect!');
+    button.setAttribute('onclick',  'disconnectFromScreen(event);');
+
+    //Refresh images
+    refreshScreenImages();
 }
 
-function disconnectFromScreen(screenName){
+function disconnectFromScreen(onClickEvent){
+    //Get screenname
+    var screenName = onClickEvent.target.parentElement.id;
 
+    // === Change attribute first ==============
+    //Search for index
+    var screen_index = NaN;
+    for (var i=0; i < screens.length; i++){
+	if (screens[i].name == screenName){
+	    screen_index = i;    
+	    break;
+	}
+    }
+    //Change connected attribute to true
+    screens[screen_index].connected = false;
+    
+    //Change button state!
+    var button = document.getElementById(screenName);
+
+    button = button.childNodes[2];
+    button.setAttribute('value',  'Connect!');
+    button.setAttribute('onclick',  'connectToScreen(event);');
+
+    //Refresh shown images
+    refreshScreenImages();    
 }
 
 function refreshScreenImages(){
+    //Re-create indexes
+    var indexes = createIndexes(index);
 
+    //Send them again
+    socket.emit('image index', indexes);
 }
 
 
@@ -119,10 +163,12 @@ function showImage (index){
     socket.emit('image index', indexes);
 }
 
+//This function creates the image indexes corresponding to the
+//connected screens
 function createIndexes(index){
     var indexes = new Array();
     var fake_index = index;
-    for (i = 0; i < screens.length; i++){
+    for (var i = 0; i < screens.length; i++){
 	if (screens[i].connected == true){
 	    indexes.push({screen: screens[i].name, index: fake_index});
 	    fake_index = (fake_index + 1)%imageCount;
@@ -134,7 +180,7 @@ function createIndexes(index){
 function initialiseGallery(){
     var container = document.querySelector('#gallery');
     var i, img;
-    for (i = 0; i < imageCount; i++) {
+    for (var i = 0; i < imageCount; i++) {
         img = document.createElement("img");
         img.src = "images/" +i +".jpg";
         document.body.appendChild(img);

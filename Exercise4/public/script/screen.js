@@ -14,11 +14,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //Deal with new index event
     socket.on("message", function(data){
 	//Parse data to search which index image should this screen display
-	for (i = 0; i < data.length; i++){
-	    if (data[i].name == devicename){
+	var found = false;
+	for (var i = 0; i < data.length; i++){
+	    if (data[i].screen == devicename){
 		showImage(data[i].index);
+		found = true;
 	    }
 	}
+	if (found == false){
+	    //Remove image from screen if nothing is sent to that
+	    //screen
+	    clearImage();
+	}
+	
     });
 });
 

@@ -43,7 +43,7 @@ io.on('connection', function(socket){
     }
     
     socket.on('image index', function(data){
-        console.log("New image index clicked: "+ data);
+        console.log("New image index clicked");
         socket.broadcast.emit('message', data);
     })
 
