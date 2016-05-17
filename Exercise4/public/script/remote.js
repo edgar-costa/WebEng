@@ -10,6 +10,9 @@ var connected_screens = new Array();
 //Keeps track of last clicked image
 var lastClickedImageIndex = NaN;
 
+//Random number that identifies the remote tab...
+var remoteId = Math.floor(Math.random()*10001);
+
 function trackScreen(screenName){
     // === Remove the default text first =============
     //Check if other screens tracked
@@ -83,6 +86,10 @@ function untrackScreen(screenName){
 
 	//Call to update images (send new indexes)
 	updateImages();
+
+	//Emit remoteToScreenConnection message
+	//var data = {screen: screenName, remote: remoteId};
+	//socket.emit('remoteDisconnect', data);
     }
 
     //Remove screen from tracked screens too
@@ -145,6 +152,10 @@ function connectToScreen(onClickEvent){
     button = button.childNodes[2];
     button.setAttribute('value',  'Disconnect!');
     button.setAttribute('onclick',  'disconnectFromScreen(event);');
+
+    //Emit remoteToScreenConnection message
+    var data = {screen: screenName, remote: remoteId};
+    socket.emit('remoteConnect', data);
 }
 
 function disconnectFromScreen(onClickEvent){
@@ -188,6 +199,9 @@ function disconnectFromScreen(onClickEvent){
 	button.setAttribute('value',  'Connect!');
 	button.setAttribute('onclick',  'connectToScreen(event);');
 	
+	//Emit remoteToScreenConnection message
+	var data = {screen: screenName, remote: remoteId};
+	socket.emit('remoteDisconnect', data);
     }
 }
 
@@ -211,8 +225,11 @@ function showImage (index){
     //Compute new indexes
     var indexes = createIndexes(index);
 
+    //Send remoteId too
+    var data = {remote: remoteId, indexes: indexes};
+
     //Send message
-    socket.emit('image index', indexes);
+    socket.emit('image index', data);
 }
 
 
@@ -222,9 +239,12 @@ function updateImages(){
 
     //Create new indexes
     var indexes = createIndexes(head_index);
+    
+    //Send remoteId too
+    var data = {remote: remoteId, indexes: indexes};
 
     //Send new message to screens
-    socket.emit('image index', indexes);
+    socket.emit('image index', data);
 }
 
 
@@ -281,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function connectToServer(){
     // Connect to the socket.io server
-    socket = io.connect('', {query: {type: "Remote"}});
+    socket = io.connect('', {query: {type: "Remote", remote: remoteId}});
 
     //Add screenName to list of devices when event occurs
     socket.on('screenConnectedToServer', function(screenName){

@@ -41,12 +41,19 @@ io.on('connection', function(socket){
 	//Broadcast event to remotes!
 	socket.broadcast.emit('screenConnectedToServer', screenName);
     }
-    
+
+    if (type == 'Remote'){
+	var remote = socket.handshake.query.remote;
+	console.log("Remote connected. Id: "+remote);
+    }
+
+    //Just re-broadcast the message to the screens
     socket.on('image index', function(data){
         console.log("New image index clicked");
         socket.broadcast.emit('message', data);
     })
 
+    
     socket.on('disconnect', function(){
 	console.log("disconnect received from socket. type: "+type);
 	if (type == 'Screen'){
@@ -58,4 +65,26 @@ io.on('connection', function(socket){
 	    socket.broadcast.emit('screenDisconnectedFromServer', screenName);
 	}
     });
+
+
+    socket.on('remoteConnect', function(data){
+	var screen = data.screen;
+	var remote = data.remote;
+	console.log("Screen "+screen+" has been CONNECTED to remote with ID: "+remote);
+
+	//Re-broadcast to screens
+	socket.broadcast.emit("remoteConnect", data);
+    });
+
+    socket.on('remoteDisconnect', function(data){
+	var screen = data.screen;
+	var remote = data.remote;
+	console.log("Screen "+screen+" has been DISCONNETED from remote with ID: "+remote);
+
+	//Re-broadcast to screens
+	socket.broadcast.emit("remoteDisconnect", data);
+    });
+
+    
+
 });

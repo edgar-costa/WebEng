@@ -1,6 +1,10 @@
 var devicename; // the name of this screen and specified in the URL
 var imageCount = 7; // the maximum number of images available
 
+//Variable that keeps track of the remoteId to which the screen is
+//connected. By design, a screen can only be connected to one remote.
+var connectedRemote = -1;
+
 document.addEventListener("DOMContentLoaded", function(event) {
     //Gets the name of the screen from the query parameters
     devicename = getQueryParams().name; 
@@ -11,22 +15,64 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //ConnectToServer(devicename);
     socket = io.connect('', {query: {type: "Screen", name: devicename}});       
 
-    //Deal with new index event
-    socket.on("message", function(data){
-	//Parse data to search which index image should this screen display
-	var found = false;
-	for (var i = 0; i < data.length; i++){
-	    if (data[i].screen == devicename && data[i].index != null){
-		showImage(data[i].index);
-		found = true;
+    //Deal with remote connect message ----------------------------------------
+    socket.on("remoteConnect", function(data){
+	var remoteId = data.remote;
+	var screenName = data.screen;
+	
+	//Deal with message only if it is scoped to this screen
+	if (screenName == devicename){
+	    if (connectedRemote == -1){
+		connectedRemote = remoteId;
+	    }
+	    else {
+		alert("Screen is already connected to a remote!");
 	    }
 	}
-	if (found == false){
-	    //Remove image from screen if nothing is sent to that
-	    //screen
-	    clearImage();
-	}
+    });
+
+
+    //Deal with remote disconnect message -------------------------------------
+    socket.on("remoteDisconnect", function(data){
+	var remoteId = data.remote;
+	var screenName = data.screen;
 	
+	//Deal with message only if it is scoped to this screen
+	if (screenName == devicename){
+	    if (connectedRemote != -1 && remoteId == connectedRemote){
+		connectedRemote = -1;
+	    }
+	    else {
+		alert("Error found!");
+	    }
+	}
+    });
+
+
+    //Deal with new index event ------------------------------------------------
+    socket.on("message", function(data){
+	//Separate remote id and indexes
+	var remoteId = data.remote;
+	var indexes = data.indexes;
+	
+	//Parse data only if message comes from connected
+	//remote. Otherwise, ignore message.
+	if (remoteId == connectedRemote){
+	    //Parse indexes structure to search which index image should
+	    //this screen display
+	    var found = false;
+	    for (var i = 0; i < indexes.length; i++){
+		if (indexes[i].screen == devicename && indexes[i].index != null){
+		    showImage(indexes[i].index);
+		    found = true;
+		}
+	    }
+	    if (found == false){
+		//Remove image from screen if nothing is sent to that
+		//screen
+		clearImage();
+	    }
+	}
     });
 });
 
