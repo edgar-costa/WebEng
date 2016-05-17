@@ -4,23 +4,22 @@ var imageCount = 7; // the maximum number of images available
 var socket = NaN;
 
 //Array that keeps track of the screens 
-var screens = new Array();
+var tracked_screens = new Array();
+var connected_screens = new Array();
 
+//Keeps track of last clicked image
+var lastClickedImageIndex = NaN;
 
-function trackScreen(onClickEvent){
-    //Get the screenName
-    var screenName = onClickEvent || window.event;
-
+function trackScreen(screenName){
     // === Remove the default text first =============
-    //Check if other screens are present
-    if (screens.length == 0){
+    //Check if other screens tracked
+    if (tracked_screens.length == 0){
 	//Remove span
 	var defaultText = document.getElementById("defaulttext");
 	defaultText.parentNode.removeChild(defaultText);
     }
     // === Append screenName to array ================
-    var screen = {name: screenName, connected:false}
-    screens.push(screen)
+    tracked_screens.push(screenName)
 
     // === Add new devide to the list =================
     //Get the menu element
@@ -51,40 +50,71 @@ function trackScreen(onClickEvent){
     menuList.appendChild(entry);
 }
 
-function untrackScreen(onClickEvent){
-    //Get the screenName
-    var screenName = onClickEvent || window.event;
-
-    //Remove screen from variable here
+function untrackScreen(screenName){
+    //Check if screen was in connected screens
     var screen_index = NaN;
-    for (var i = 0; i < screens.length; i++){
-	if (screens[i].name == screenName){
+    var found = false;
+    for (var i = 0; i < connected_screens.length; i++){
+	if (connected_screens[i].name == screenName){
+	    found = true;
 	    screen_index = i;
 	    break;
 	}
     }
-    var screen_to_remove = screens[screen_index];
-    screens.splice(screen_index, 1)
-    //alert("Screens left: "+screens.length);
+    if (found == true){
+	//Remove screen from connected screens
+	var screen_to_remove = connected_screens[screen_index];
 
-    //Check if other screens are present
-    if (screens.length == 0){
-	//Remove span
-	var menuDiv = document.getElementById("menu");
-	var parNode = document.createElement("p");
-	var node = document.createTextNode("No devices detected");
-	parNode.appendChild(node)
-	parNode.id = 'defaulttext';
-	menuDiv.appendChild(parNode);
+	//Get old image index
+	var old_index = screen_to_remove.index;
+
+	//Re-compute indexes for screens that were connected later
+	//than this one.
+
+	//Iterate the screens that were connected later (the ones that
+	//must be updated)
+	for (var i = screen_index + 1; i < connected_screens.length; i++){
+	    connected_screens[i].index = old_index;
+	    old_index = (old_index + 1)%imageCount;
+	}
+
+	//Remove it from connected screens
+	connected_screens.splice(screen_index, 1)
+
+	//Call to update images (send new indexes)
+	updateImages();
     }
 
-    //Remove from list
-    var li_to_remove = document.getElementById(screen_to_remove.name);
-    li_to_remove.parentNode.removeChild(li_to_remove);
+    //Remove screen from tracked screens too
+    var screen_index = NaN;
+    var found = false;
+    for (var i = 0; i < tracked_screens.length; i++){
+	if (tracked_screens[i] == screenName){
+	    screen_index = i;
+	    found = true;
+	    break;
+	}
+    }
     
-    //Call refresh image distribution if it was connected
-    if (screen_to_remove.connected == true){
-	refreshScreenImages();
+    if (found == true){
+	var screen_to_remove = tracked_screens[screen_index];
+	tracked_screens.splice(screen_index, 1)
+	
+	//Check if other screens are present. If not, write default
+	//message
+	if (tracked_screens.length == 0){
+	    //Remove span
+	    var menuDiv = document.getElementById("menu");
+	    var parNode = document.createElement("p");
+	    var node = document.createTextNode("No devices detected");
+	    parNode.appendChild(node)
+	    parNode.id = 'defaulttext';
+	    menuDiv.appendChild(parNode);
+	}
+	
+	//Remove screen from <ul> list
+	var li_to_remove = document.getElementById(screen_to_remove);
+	li_to_remove.parentNode.removeChild(li_to_remove);
     }
 }
 
@@ -92,87 +122,128 @@ function connectToScreen(onClickEvent){
     //Get screenname
     var screenName = onClickEvent.target.parentElement.id;
 
-    // === Change attribute first ==============
-    //Search for index
-    var screen_index = NaN;
-    for (var i=0; i < screens.length; i++){
-	if (screens[i].name == screenName){
-	    screen_index = i;    
-	    break;
-	}
+    //Calculate image index for new screen
+    if (connected_screens.length == 0){
+	var last_index = lastClickedImageIndex;
+	var new_index = last_index;
+	var new_connected_screen = {name:screenName, index: new_index};
     }
-    //Change connected attribute to true
-    screens[screen_index].connected = true;
+    else {
+	var last_index = connected_screens[connected_screens.length-1].index;
+	var new_index = (last_index + 1)%imageCount;
+	var new_connected_screen = {name:screenName, index: new_index};
+    }
+    
+    //Put screenName on connectedScreens
+    connected_screens.push(new_connected_screen);
+    
+    //Call to update images (send new indexes)
+    updateImages();
 
     //Change button state!
     var button = document.getElementById(screenName);
     button = button.childNodes[2];
     button.setAttribute('value',  'Disconnect!');
     button.setAttribute('onclick',  'disconnectFromScreen(event);');
-
-    //Refresh images
-    refreshScreenImages();
 }
 
 function disconnectFromScreen(onClickEvent){
     //Get screenname
     var screenName = onClickEvent.target.parentElement.id;
 
-    // === Change attribute first ==============
-    //Search for index
+    //Search for screen index in connected screens array
     var screen_index = NaN;
-    for (var i=0; i < screens.length; i++){
-	if (screens[i].name == screenName){
+    var found = false;
+    for (var i = 0; i < connected_screens.length; i++){
+	if (connected_screens[i].name == screenName){
 	    screen_index = i;    
+	    found = true;
 	    break;
 	}
     }
-    //Change connected attribute to true
-    screens[screen_index].connected = false;
     
-    //Change button state!
-    var button = document.getElementById(screenName);
+    if (found == true){
+	//Modify image indexes for screens connected later than the
+	//disconnected screen
+	
+	//Get previous image index of screen to disconnect
+	var old_index = connected_screens[screen_index].index;
 
-    button = button.childNodes[2];
-    button.setAttribute('value',  'Connect!');
-    button.setAttribute('onclick',  'connectToScreen(event);');
+	//Iterate the screens that were connected later (the ones that
+	//must be updated)
+	for (var i = screen_index + 1; i < connected_screens.length; i++){
+	    connected_screens[i].index = old_index;
+	    old_index = (old_index + 1)%imageCount;
+	}
 
-    //Refresh shown images
-    refreshScreenImages();    
-}
+	//Remove screenName from connected screens
+	connected_screens.splice(screen_index, 1)
 
-function refreshScreenImages(){
-    //Re-create indexes
-    var indexes = createIndexes(index);
+	//Call to update images (send new indexes)
+	updateImages();	
 
-    //Send them again
-    socket.emit('image index', indexes);
+	//Change button state!
+	var button = document.getElementById(screenName);
+	button = button.childNodes[2];
+	button.setAttribute('value',  'Connect!');
+	button.setAttribute('onclick',  'connectToScreen(event);');
+	
+    }
 }
 
 
 function showImage (index){
+    //Update global variable
+    lastClickedImageIndex = index;
+
+    //Parameter index is the last picture index that was clicked: it
+    //has to be assigned to the first connected screen
+    
     // Update selection on remote
     currentImage = index;
     var images = document.querySelectorAll("img");
     document.querySelector("img.selected").classList.toggle("selected");
     images[index].classList.toggle("selected");
 
-    // Send the command to the screen
-    //alert('Image index chosen: '+index);
+    // Send the command to the screens: every time a new image has
+    // been clicked, all indexes must be updated!
+
+    //Compute new indexes
     var indexes = createIndexes(index);
+
+    //Send message
     socket.emit('image index', indexes);
 }
+
+
+function updateImages(){
+    //Get the last clicked image
+    var head_index = lastClickedImageIndex;
+
+    //Create new indexes
+    var indexes = createIndexes(head_index);
+
+    //Send new message to screens
+    socket.emit('image index', indexes);
+}
+
 
 //This function creates the image indexes corresponding to the
 //connected screens
 function createIndexes(index){
+    //parameter index is the lastly clicked image index
+    
+    //Store results here
     var indexes = new Array();
-    var fake_index = index;
-    for (var i = 0; i < screens.length; i++){
-	if (screens[i].connected == true){
-	    indexes.push({screen: screens[i].name, index: fake_index});
-	    fake_index = (fake_index + 1)%imageCount;
-	}
+
+    var new_index = index;
+    for (var i = 0; i < connected_screens.length; i++){
+	
+	//Populate new indexes variable
+	indexes.push({screen: connected_screens[i].name, index: new_index});
+
+	//Increment new_index modulus 7
+	new_index = (new_index + 1)%imageCount;
     }
     return indexes;
 }

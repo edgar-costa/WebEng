@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//Parse data to search which index image should this screen display
 	var found = false;
 	for (var i = 0; i < data.length; i++){
-	    if (data[i].screen == devicename){
+	    if (data[i].screen == devicename && data[i].index != null){
 		showImage(data[i].index);
 		found = true;
 	    }
