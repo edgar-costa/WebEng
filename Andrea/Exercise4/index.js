@@ -38,13 +38,13 @@ io.on('connection', function(socket){
         //Log it
         console.log("\tScreen name: " + screenName);
 
-    //Broadcast event to remotes!
-    socket.broadcast.emit('screenConnectedToServer', screenName);
+	//Broadcast event to remotes!
+	socket.broadcast.emit('screenConnectedToServer', screenName);
     }
 
     if (type == 'Remote'){
-    var remote = socket.handshake.query.remote;
-    console.log("Remote connected. Id: "+remote);
+	var remote = socket.handshake.query.remote;
+	console.log("Remote connected. Id: "+remote);
     }
 
     //Just re-broadcast the message to the screens
@@ -61,34 +61,34 @@ io.on('connection', function(socket){
     })
     
     socket.on('disconnect', function(){
-    console.log("disconnect received from socket. type: "+type);
-    if (type == 'Screen'){
-        //Get screenName first
-        var screenName = socket.handshake.query.name;
-        console.log("Screen has been disconnected: "+screenName);
+	console.log("disconnect received from socket. type: "+type);
+	if (type == 'Screen'){
+	    //Get screenName first
+	    var screenName = socket.handshake.query.name;
+	    console.log("Screen has been disconnected: "+screenName);
 
-        //Inform remotes about disconnect of screenName
-        socket.broadcast.emit('screenDisconnectedFromServer', screenName);
-    }
+	    //Inform remotes about disconnect of screenName
+	    socket.broadcast.emit('screenDisconnectedFromServer', screenName);
+	}
     });
 
 
     socket.on('remoteConnect', function(data){
-    var screen = data.screen;
-    var remote = data.remote;
-    console.log("Screen "+screen+" has been CONNECTED to remote with ID: "+remote);
+	var screen = data.screen;
+	var remote = data.remote;
+	console.log("Screen "+screen+" has been CONNECTED to remote with ID: "+remote);
 
-    //Re-broadcast to screens
-    socket.broadcast.emit("remoteConnect", data);
+	//Re-broadcast to screens
+	socket.broadcast.emit("remoteConnect", data);
     });
 
     socket.on('remoteDisconnect', function(data){
-    var screen = data.screen;
-    var remote = data.remote;
-    console.log("Screen "+screen+" has been DISCONNETED from remote with ID: "+remote);
+	var screen = data.screen;
+	var remote = data.remote;
+	console.log("Screen "+screen+" has been DISCONNETED from remote with ID: "+remote);
 
-    //Re-broadcast to screens
-    socket.broadcast.emit("remoteDisconnect", data);
+	//Re-broadcast to screens
+	socket.broadcast.emit("remoteDisconnect", data);
     });
 
     
