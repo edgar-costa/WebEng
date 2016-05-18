@@ -8,7 +8,7 @@ var tracked_screens = new Array();
 var connected_screens = new Array();
 
 //Keeps track of last clicked image
-var lastClickedImageIndex = NaN;
+var lastClickedImageIndex = 0;
 
 //Random number that identifies the remote tab...
 var remoteId = Math.floor(Math.random()*10001);
@@ -165,6 +165,7 @@ function connectToScreen(onClickEvent){
     //Emit remoteToScreenConnection message
     var data = {screen: screenName, remote: remoteId};
     socket.emit('remoteConnect', data);
+    updateImages();
 }
 
 function disconnectFromScreen(onClickEvent){
