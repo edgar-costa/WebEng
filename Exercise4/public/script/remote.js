@@ -298,7 +298,7 @@ function initialiseGallery(){
 document.addEventListener("DOMContentLoaded", function(event) {
     //Start gallery first
     initialiseGallery();
-    //addEventListenerDevMotion();
+    addEventListenerDevMotion();
     addEventListenerDevOrient()
     document.querySelector('#toggleMenu').addEventListener("click", function(event){
         var style = document.querySelector('#menu').style;
@@ -355,17 +355,17 @@ function addEventListenerDevOrient(){
 //called from within addEventListenerDevOrient whenever the device orientation event is fired
 function deviceOrientationHandler(tiltLR, tiltFB, dir){
 
-    if(currentZoomLevel!=1 &&  tiltFB>70){
+    if(currentZoomLevel!=1 &&  tiltFB>40){
         currentZoomLevel = 1; 
 
     }
-    if(currentZoomLevel!=2 && tiltFB<=70 && tiltFB>50){
+    if(currentZoomLevel!=2 && tiltFB<=40 && tiltFB>30){
         currentZoomLevel = 2; 
     }
-    if(currentZoomLevel!=3 && tiltFB<=50 && tiltFB>30){
+    if(currentZoomLevel!=3 && tiltFB<=30 && tiltFB>20){
         currentZoomLevel = 3; 
     }
-    if(currentZoomLevel!=4 && tiltFB<=30 && tiltFB>0){
+    if(currentZoomLevel!=4 && tiltFB<=20 && tiltFB>0){
          currentZoomLevel = 4; 
     }
     updateZoom(currentZoomLevel);
@@ -402,14 +402,14 @@ function deviceMotionHandler(eventData){
 
     // Grab the rotation rate from the results
      var rotation = eventData.rotationRate;
-    if(rotation.gamma > 8){
+    if(rotation.gamma >6){
      if(restPosition==true){
           restPosition = false;
-          var nextImg = (currentImage - 1) % imageCount;
+          var nextImg = (currentImage + imageCount - 1) % imageCount;
           showImage(nextImg);
         }
      }
-   if(rotation.gamma < -8){
+   if(rotation.gamma < -6){
      if(restPosition==true){
       restPosition = false;
       var nextImg = (currentImage +1) % imageCount;
