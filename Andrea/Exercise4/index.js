@@ -20,8 +20,8 @@ http.listen(8080, function(){
 
 
 //Create array that will hold the connected screens
-//var connectedScreens = new Array();
 
+var connected_screens = new Array();
 
 //Then I listen on the connection event for incoming sockets, and I log it to the console.
 io.on('connection', function(socket){
@@ -34,7 +34,7 @@ io.on('connection', function(socket){
     if (type == 'Screen'){
         //Get screen name
         var screenName = socket.handshake.query.name;
-
+        connected_screens.push(screenName);
         //Log it
         console.log("\tScreen name: " + screenName);
 
@@ -45,6 +45,13 @@ io.on('connection', function(socket){
     if (type == 'Remote'){
     var remote = socket.handshake.query.remote;
     console.log("Remote connected. Id: "+remote);
+    //All the screens to screens
+    var data = {remote: remoteId, screens:connected_screens};
+
+    socket.broadcast.emit("PreExistingScreens", data);
+     console.log(" sent connected screens with size" + connected_screens.size);
+
+
     }
 
     //Just re-broadcast the message to the screens
@@ -66,6 +73,8 @@ io.on('connection', function(socket){
         //Get screenName first
         var screenName = socket.handshake.query.name;
         console.log("Screen has been disconnected: "+screenName);
+        var index = connected_screens.indexOf(screenName);
+        connected_screens.splice(index,1);
 
         //Inform remotes about disconnect of screenName
         socket.broadcast.emit('screenDisconnectedFromServer', screenName);

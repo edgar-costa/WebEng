@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //Start gallery first
     initialiseGallery();
     addEventListenerDevMotion();
-    addEventListenerDevOrient()
+    //addEventListenerDevOrient()
     document.querySelector('#toggleMenu').addEventListener("click", function(event){
         var style = document.querySelector('#menu').style;
         style.display = style.display == "none" || style.display == ""  ? "block" : "none";
@@ -324,6 +324,27 @@ function connectToServer(){
     socket.on('screenDisconnectedFromServer', function(screenName){
     untrackScreen(screenName);
     });
+
+   
+
+
+    socket.on('preExistingScreens', function(data){
+      
+    // if(data.remote ==remoteId){
+    //     document.getElementById("log").innerHTML = "hello" ;
+    //     // for(int i=0; i<data.screens.length;i++){
+    //     //     scr = data.screens.pop();
+    //     //     if(tracked_screens.indexOf(scr)==-1){
+    //     //         trackScreen(scr);
+    //     //     }
+    //     // }
+
+    // }
+    });
+
+
+
+
 }
 
 
