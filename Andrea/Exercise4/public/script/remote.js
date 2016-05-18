@@ -341,9 +341,10 @@ function addEventListenerDevOrient(){
 
     // alpha is the compass direction the device is facing in degrees
     var dir = eventData.alpha
-
+   
     // call our orientation event handler
-    deviceOrientationHandler(tiltLR, tiltFB, dir);
+        deviceOrientationHandler(tiltLR, tiltFB, dir);
+
   }, false);
         
     }else{
@@ -374,8 +375,7 @@ function deviceOrientationHandler(tiltLR, tiltFB, dir){
 }
 //sends new message to server telling to inform screens to update zoom 
 function updateZoom(zoom){
-     
-    var data = {zoom:zoom};
+    var data = {remote: remoteId, zoom:zoom};
     socket.emit('zoom', data);
 }
 
@@ -414,8 +414,6 @@ function deviceMotionHandler(eventData){
       restPosition = false;
       var nextImg = (currentImage +1) % imageCount;
       showImage(nextImg);}
-
-          
    }
  
 }

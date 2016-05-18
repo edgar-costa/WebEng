@@ -79,8 +79,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //New zoom level
     socket.on('zoom', function(data){
 
-    	document.getElementById("image").style.width = data.zoom*20+ "%";
+    	if(connectedRemote==data.remote){
+       	document.getElementById("image").style.width = data.zoom*20+ "%";
     	document.getElementById("image").style.height = data.zoom*20 + "%";
+   		}
     });
 
 

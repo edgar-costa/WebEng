@@ -375,8 +375,7 @@ function deviceOrientationHandler(tiltLR, tiltFB, dir){
 }
 //sends new message to server telling to inform screens to update zoom 
 function updateZoom(zoom){
-     
-    var data = {zoom:zoom};
+    var data = {remote: remoteId, zoom:zoom};
     socket.emit('zoom', data);
 }
 
