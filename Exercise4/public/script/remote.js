@@ -399,8 +399,7 @@ function deviceMotionHandler(eventData){
             restPosition=true; 
         }
     }
-    // Grab the acceleration including gravity from the results
-    acceleration = eventData.accelerationIncludingGravity;
+
     // Grab the rotation rate from the results
      var rotation = eventData.rotationRate;
     if(rotation.gamma > 8){
@@ -408,7 +407,6 @@ function deviceMotionHandler(eventData){
           restPosition = false;
           var nextImg = (currentImage - 1) % imageCount;
           showImage(nextImg);
-
         }
      }
    if(rotation.gamma < -8){
