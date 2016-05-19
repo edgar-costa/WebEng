@@ -51,7 +51,7 @@ io.on('connection', function(socket){
         var data = {remote: remote, screens: connected_screens};
 
         //este broadcast no funciona
-        socket.broadcast.emit('preExistingScreens', data);
+        socket.emit('preExistingScreens', data);
         console.log(" sent connected screens with size" + connected_screens.length);
     }
 

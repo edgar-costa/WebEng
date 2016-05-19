@@ -321,17 +321,17 @@ function connectToServer(){
     });
 
      socket.on('preExistingScreens', function(data){
-      alert("worked");
-    // if(data.remote ==remoteId){
-    //     document.getElementById("log").innerHTML = "hello" ;
-    //     // for(int i=0; i<data.screens.length;i++){
-    //     //     scr = data.screens.pop();
-    //     //     if(tracked_screens.indexOf(scr)==-1){
-    //     //         trackScreen(scr);
-    //     //     }
-    //     // }
+    if(data.remote ==remoteId){
 
-    // }
+            for (i = 0; i < data.screens.length; i++) { 
+                scr = data.screens[i];
+                trackScreen(scr);
+            }
+        
+            
+        }
+
+    
     });
 
     //Deal with screenName disconnect
