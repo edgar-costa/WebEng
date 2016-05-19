@@ -26,7 +26,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		connectedRemote = remoteId;
 	    }
 	    else {
+	    clearImage();
 		alert("Screen is already connected to a remote!");
+
 	    }
 	}
     });
@@ -47,6 +49,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	    }
 	}
     });
+
+
+      //Deal with remote close message -------------------------------------
+    socket.on("remoteClose", function(remoteId){
+
+	
+	    if (connectedRemote != -1 && remoteId == connectedRemote){
+		connectedRemote = -1;
+		clearImage();
+	    }
+	 //    else {
+		// alert("Error found!");
+	 //    }
+	
+    });
+
 
 
     //Deal with new index event ------------------------------------------------
@@ -80,8 +98,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     socket.on('zoom', function(data){
 
     	if(connectedRemote==data.remote){
-       	document.getElementById("image").style.width = data.zoom*20+ "%";
-    	document.getElementById("image").style.height = data.zoom*20 + "%";
+    	var z = 50 + data.zoom * 10; 
+       	document.getElementById("image").style.width = z+ "%";
+    	document.getElementById("image").style.height = z + "%";
    		}
     });
 

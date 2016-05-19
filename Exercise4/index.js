@@ -34,39 +34,39 @@ io.on('connection', function(socket){
     if (type == 'Screen'){
         //Get screen name
         var screenName = socket.handshake.query.name;
-        connected_screens.push(screenName);
-        //Log it
-        console.log("\tScreen name: " + screenName);
+      
+            connected_screens.push(screenName);
+            //Log it
+            console.log("\tScreen name: " + screenName);
 
-    //Broadcast event to remotes!
-    socket.broadcast.emit('screenConnectedToServer', screenName);
+                //Broadcast event to remotes!
+            socket.broadcast.emit('screenConnectedToServer', screenName);
+
     }
 
     if (type == 'Remote'){
-    var remote = socket.handshake.query.remote;
-    console.log("Remote connected fasdf. Id: "+remote);
-    //All the screens to screens
-    var data = {remote: remote, screens:connected_screens};
+        var remote = socket.handshake.query.remote;
+        console.log("Remote connected fasdf. Id: "+remote);
+        //All the screens to screens
+        var data = {remote: remote, screens: connected_screens};
 
-    //este broadcast no funciona
-    socket.broadcast.emit('preExistingScreens', data);
-    console.log(" sent connected screens with size" + connected_screens.length);
-
-
+        //este broadcast no funciona
+        socket.broadcast.emit('preExistingScreens', data);
+        console.log(" sent connected screens with size" + connected_screens.length);
     }
 
     //Just re-broadcast the message to the screens
     socket.on('image index', function(data){
         console.log("New image index clicked");
         socket.broadcast.emit('message', data);
-    })
+    });
 
 
     //Andrea 4.2 zoom 
     socket.on('zoom', function(data){
         console.log("Zoom changed");
         socket.broadcast.emit('zoom',data);
-    })
+    });
     
     socket.on('disconnect', function(){
     console.log("disconnect received from socket. type: "+type);
@@ -80,6 +80,13 @@ io.on('connection', function(socket){
         //Inform remotes about disconnect of screenName
         socket.broadcast.emit('screenDisconnectedFromServer', screenName);
     }
+      if (type == 'Remote'){
+         var remoteId = socket.handshake.query.remote;
+          console.log("Remote has been disconnected: "+remoteId);
+          socket.broadcast.emit("remoteClose", remoteId);
+
+      }
+
     });
 
 
